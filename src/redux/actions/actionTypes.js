@@ -1,0 +1,2 @@
+export const DISPLAY_SEASONS = 'DISPLAY_SEASONS';
+export const FILTER_SEASONS = 'FILTER_SEASONS';
