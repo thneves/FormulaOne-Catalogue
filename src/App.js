@@ -1,3 +1,5 @@
-const App = () => <h1> Formula 1 - Catalogue</h1>;
+import Header from './components/Header';
+
+const App = () => <Header />;
 
 export default App;
