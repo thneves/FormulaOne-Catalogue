@@ -1,10 +1,10 @@
 import Header from './components/Header';
-import Season from './components/Seasons';
+import SeasonsList from './containers/seasonsList';
 
 const App = () => (
   <>
     <Header />
-    <Season />
+    <SeasonsList />
   </>
 );
 export default App;

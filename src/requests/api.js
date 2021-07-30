@@ -1,17 +1,13 @@
-const options = {
-  method: 'GET',
-  url: 'https://api-formula-1.p.rapidapi.com/seasons',
-  headers: {
-    'x-rapidapi-key': '2f176338d0msh940dc82bde5d518p1dd3b0jsnc5b9fdce8168',
-    'x-rapidapi-host': 'api-formula-1.p.rapidapi.com',
-  },
+import axios from 'axios';
+import * as options from './optionsTypes';
+
+const getSeasons = async () => {
+  const response = await axios.request(options.seasons);
+  if (response.status === 200) {
+    const seasons = response.data.response;
+    return seasons;
+  }
+  throw Error(response.status);
 };
 
-async function getRequest() {
-  try {
-    const result = await axios.request(options);
-    console.log(result);
-  } catch (error) {
-    console.log(error);
-  }
-}
+export default getSeasons;
