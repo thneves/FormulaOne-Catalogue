@@ -10,4 +10,13 @@ const getSeasons = async () => {
   throw Error(response.status);
 };
 
-export default getSeasons;
+const getDrivers = async () => {
+  const response = await axios.request(options.rankings);
+  if (response === 200) {
+    const drivers = response.data.response;
+    return drivers;
+  }
+  throw Error(response.status);
+};
+
+export { getSeasons, getDrivers };

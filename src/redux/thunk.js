@@ -1,6 +1,13 @@
 import store from './store';
-import { fetchSeasonsRequest, fetchSeasonsSuccess, fetchSeasonsFailure } from './actions';
-import getSeasons from '../requests/api';
+import {
+  fetchSeasonsRequest,
+  fetchSeasonsSuccess,
+  fetchSeasonsFailure,
+  fetchDriversRequest,
+  fetchDriversSuccess,
+  fetchDriversFailure,
+} from './actions';
+import { getSeasons, getDrivers } from '../requests/api';
 
 const fetchSeasons = () => {
   store.dispatch(fetchSeasonsRequest());
@@ -13,4 +20,15 @@ const fetchSeasons = () => {
     });
 };
 
-export default fetchSeasons;
+const fetchDrivers = () => {
+  store.dispatch(fetchDriversRequest());
+  const requestDrivers = getDrivers();
+  requestDrivers.then(drivers => {
+    store.dispatch(fetchDriversSuccess(drivers));
+  })
+    .catch(error => {
+      store.dispatch(fetchDriversFailure(error.message));
+    });
+};
+
+export { fetchSeasons, fetchDrivers };
