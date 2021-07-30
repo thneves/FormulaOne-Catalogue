@@ -1,5 +1,5 @@
 import Header from './components/Header';
-import SeasonsList from './containers/seasonsList';
+import SeasonsList from './containers/SeasonsList/SeasonsList';
 
 const App = () => (
   <>

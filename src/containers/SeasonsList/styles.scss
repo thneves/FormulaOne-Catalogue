@@ -1,0 +1,6 @@
+.seasons-list {
+  background-color: khaki;
+  padding: 3rem 10rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+}
