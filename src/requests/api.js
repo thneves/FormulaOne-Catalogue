@@ -5,7 +5,6 @@ const getSeasons = async () => {
   const response = await axios.request(options.seasons);
   if (response.status === 200) {
     const seasons = response.data.response;
-    console.log(seasons);
     return seasons;
   }
   throw Error(response.status);
