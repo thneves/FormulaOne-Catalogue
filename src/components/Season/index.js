@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
 const SeasonCard = ({ season }) => (
   <div className="card">
     <div className="card_image">
       <img alt="logotipo" />
-      <div className="card-title">
+      <Link to="/rankings" className="card-title">
         <p>{ season }</p>
-      </div>
+      </Link>
     </div>
   </div>
 );
