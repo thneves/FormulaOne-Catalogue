@@ -12,7 +12,7 @@ const getSeasons = async () => {
 
 const getDrivers = async () => {
   const response = await axios.request(options.rankings);
-  if (response === 200) {
+  if (response.status === 200) {
     const drivers = response.data.response;
     return drivers;
   }
