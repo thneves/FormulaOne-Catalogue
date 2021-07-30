@@ -2,7 +2,7 @@ import { FETCH_SEASONS_FAILURE, FETCH_SEASONS_SUCCESS, FETCH_SEASONS_REQUEST } f
 
 const initialState = {
   loading: false,
-  data: [],
+  seasons: [],
   error: '',
 };
 
@@ -14,14 +14,14 @@ const seasonsReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        data: action.payload,
+        seasons: action.payload,
         error: '',
       };
     case FETCH_SEASONS_FAILURE:
       return {
         ...state,
         loading: false,
-        users: [],
+        seasons: [],
         error: action.payload,
       };
     default:

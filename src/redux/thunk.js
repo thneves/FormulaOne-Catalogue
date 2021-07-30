@@ -5,9 +5,15 @@ import getSeasons from '../requests/api';
 const fetchSeasons = () => {
   store.dispatch(fetchSeasonsRequest());
   const requestSeasons = getSeasons();
-  requestSeasons.then(seasons => store.disptach(fetchSeasonsSuccess(seasons))).catch(error => {
-    store.dispatch(fetchSeasonsFailure(error));
-  });
+  console.log(requestSeasons);
+  requestSeasons.then(seasons => {
+    console.log(seasons);
+    store.dispatch(fetchSeasonsSuccess(seasons));
+    console.log('why?');
+  })
+    .catch(error => {
+      store.dispatch(fetchSeasonsFailure(error.message));
+    });
 };
 
 export default fetchSeasons;
