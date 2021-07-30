@@ -12,18 +12,16 @@ const SeasonsList = () => {
 
   const seasonListState = useSelector(state => state.seasons.seasons);
   const filterSeasonState = useSelector(state => state.filterSeasons);
-  console.log(filterSeasonState);
-  // const dispatch = useDispatch();
 
-  const printSeasons = seasonListState.map(season => (
-    <SeasonCard key={season} season={season} />
-  ));
-
-  console.log(filterSeasonState);
+  const printSeasons = (
+    filterSeasonState.length === 0
+      ? seasonListState.map(season => <SeasonCard key={season} season={season} />)
+      : filterSeasonState.map(season => <SeasonCard key={season} season={season} />)
+  );
 
   return (
     <>
-      <FilterModal years={seasonListState} />
+      <FilterModal />
       <div className="seasons-list">
         { printSeasons }
       </div>
