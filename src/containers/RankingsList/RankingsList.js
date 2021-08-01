@@ -26,12 +26,14 @@ const RankingsList = () => {
       points={driver.points}
       team={driver.team.name}
       teamLogo={driver.team.logo}
+      wins={driver.wins}
     />
   ));
 
   return (
     <>
       <div className="ranking">
+        <h3>Best 8 drivers - Season 2019</h3>
         { printRanking }
       </div>
     </>

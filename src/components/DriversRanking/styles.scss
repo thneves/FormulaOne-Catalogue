@@ -1,3 +1,52 @@
 .driver-card {
-  background-color: green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  width: 50%;
+  padding: 2rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  border: 2px solid azure;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  font-family: 'Orbitron', sans-serif;
 }
+
+.driver-position {
+  font-size: 4rem;
+  width: 3rem;
+  text-align: center;
+}
+
+.driver-image {
+  width: 80px;
+  height: 88px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+.driver-info {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  text-align: left;
+
+  span {
+    margin: 4px 0;
+  }
+
+  .driver-name {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+
+}
+
+.team-logo {
+  width: 175px;
+  height: 88px;
+}
+
