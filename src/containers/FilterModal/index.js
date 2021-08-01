@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
 import Modal from 'react-modal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilter } from '@fortawesome/free-solid-svg-icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { addFilter, removeFilter, resetFilter } from '../../redux/actions';
 import FilterOptions from '../../components/FilterOptions';
@@ -31,7 +33,7 @@ const FilterModal = () => {
 
   return (
     <div className="modal-div">
-      <button type="button" onClick={toggleModal}>Open Modal</button>
+      <button className="filter-btn" type="button" onClick={toggleModal}><FontAwesomeIcon icon={faFilter}>Filter</FontAwesomeIcon></button>
       <Modal isOpen={showModal} onRequestClose={toggleModal}>
         <div>
           <button type="button" onClick={toggleModal}>Close</button>

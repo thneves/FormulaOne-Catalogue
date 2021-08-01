@@ -1,4 +1,23 @@
 .modal-div {
   text-align: center;
-  background-color: lightcoral;
+  padding: 1rem 0;
+  background: rgb(98,97,98);
+  background: linear-gradient(208deg, rgba(98,97,98,1) 0%, rgba(65,64,64,0.9205883036808473) 78%, rgba(23,23,22,1) 100%);
+
+  .filter-btn {
+    background-color: transparent;
+    color: azure;
+    font-size: 1.3rem;
+    padding: 12px;
+    border-radius: 50%;
+    transition: 1.8s;
+
+    &:hover {
+      border-radius: 1px;
+      border-color: black;
+      color: black;
+      cursor: pointer;
+      background: azure;
+    }
+  }
 }
