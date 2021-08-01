@@ -21,9 +21,11 @@ const RankingsList = () => {
     <DriversRanking
       key={driver.points}
       driver={driver.driver.name}
-      img={driver.driver.image}
+      driverImg={driver.driver.image}
       position={driver.position}
       points={driver.points}
+      team={driver.team.name}
+      teamLogo={driver.team.logo}
     />
   ));
 
