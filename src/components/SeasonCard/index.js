@@ -21,7 +21,7 @@ const SeasonCard = ({ season }) => {
 };
 
 SeasonCard.propTypes = {
-  season: PropTypes.number.isRequired,
+  season: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
 };
 
 export default SeasonCard;
