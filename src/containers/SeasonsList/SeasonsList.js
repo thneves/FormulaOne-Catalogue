@@ -1,15 +1,12 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { fetchSeasons } from '../../redux/thunk';
 import './styles.scss';
 import SeasonCard from '../../components/SeasonCard/index';
 import FilterModal from '../FilterModal';
+import Loader from '../../components/Loader';
 
 const SeasonsList = () => {
-  useEffect(() => {
-    fetchSeasons();
-  }, []);
-
   const seasonListState = useSelector(state => state.seasons.seasons);
   const filterSeasonState = useSelector(state => state.filterSeasons);
 
@@ -18,6 +15,17 @@ const SeasonsList = () => {
       ? seasonListState.map(season => <SeasonCard key={season} season={season} />)
       : filterSeasonState.map(season => <SeasonCard key={season} season={season} />)
   );
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchSeasons();
+    setLoading(false);
+  }, [setLoading]);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <>
