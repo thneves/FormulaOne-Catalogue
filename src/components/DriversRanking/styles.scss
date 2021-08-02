@@ -65,22 +65,23 @@
   }
 
   .driver-position {
-    font-size: 2rem;
-    width: 1.5rem;
+    font-size: 2.2rem;
+    width: 1rem;
+    margin: 2px;
   }
 
   .driver-image {
-    width: 60px;
-    height: 68px;
-    margin: 0 0.4rem;
+    width: 70px;
+    height: 78px;
+    margin: 0 2px;
   }
 
   .driver-info {
-    width: 25%;
+    width: 38%;
 
     .driver-name {
       font-size: 0.8rem;
-      letter-spacing: 0.6px;
+      letter-spacing: 0.4px;
     }
 
     .points-wins {

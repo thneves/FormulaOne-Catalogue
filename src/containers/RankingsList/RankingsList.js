@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import { fetchDrivers } from '../../redux/thunk';
 import DriversRanking from '../../components/DriversRanking/index';
 import Loader from '../../components/Loader';
@@ -41,8 +41,8 @@ const RankingsList = () => {
     <>
       <div className="ranking">
         <div className="ranking-head">
-          <Link to="/" className="back-icon"><FontAwesomeIcon icon={faLongArrowAltLeft}>Back</FontAwesomeIcon></Link>
-          <h3>
+          <Link to="/" className="back-icon"><FontAwesomeIcon icon={faArrowCircleLeft}>Back</FontAwesomeIcon></Link>
+          <h3 className="ranking-text">
             Best 8 drivers - Season
             {' '}
             { currentSeason }

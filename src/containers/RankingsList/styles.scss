@@ -18,6 +18,10 @@
       color: white;
       font-variant: small-caps;
       margin: 0 auto;
+
+      @media (max-width: 580px) {
+        font-size: 1rem;
+      }
     }
   
     .back-icon {
@@ -28,6 +32,11 @@
 
       &:hover {
         color: green;
+      }
+
+      @media (max-width: 580px) {
+        font-size: 1.5rem;
+        margin-left: 1.5rem;
       }
     }
   }
