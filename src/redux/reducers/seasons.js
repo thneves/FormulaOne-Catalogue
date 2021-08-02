@@ -1,6 +1,6 @@
 import { FETCH_SEASONS_FAILURE, FETCH_SEASONS_SUCCESS, FETCH_SEASONS_REQUEST } from '../actions/index';
 
-const initialState = {
+export const initialState = {
   loading: false,
   seasons: [],
   error: '',
