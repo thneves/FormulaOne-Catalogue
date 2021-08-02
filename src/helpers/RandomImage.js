@@ -21,6 +21,6 @@ const randomImage = [
   Image11, Image12, Image13, Image14, Image15, Image16,
 ];
 
-const RandomIndex = () => randomImage[Math.floor(Math.random() * randomImage.length)];
+const RandomImage = () => randomImage[Math.floor(Math.random() * randomImage.length)];
 
-export default RandomIndex;
+export default RandomImage;
