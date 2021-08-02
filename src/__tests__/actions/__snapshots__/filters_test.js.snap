@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions creation should add a filter 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "season": 2012,
+    },
+    "type": "ADD_FILTER",
+  },
+]
+`;
+
+exports[`actions creation should remove a filter 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "season": 2012,
+    },
+    "type": "ADD_FILTER",
+  },
+  Object {
+    "payload": Object {
+      "season": Array [
+        2012,
+        2013,
+      ],
+    },
+    "type": "REMOVE_FILTER",
+  },
+]
+`;
+
+exports[`actions creation should reset filters 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "season": 2012,
+    },
+    "type": "ADD_FILTER",
+  },
+  Object {
+    "payload": Object {
+      "season": Array [
+        2012,
+        2013,
+      ],
+    },
+    "type": "REMOVE_FILTER",
+  },
+  Object {
+    "payload": Object {
+      "season": Array [],
+    },
+    "type": "RESET_FILTER",
+  },
+]
+`;
