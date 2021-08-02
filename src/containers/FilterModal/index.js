@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFilter } from '@fortawesome/free-solid-svg-icons';
+import { faFilter, faTimesCircle, faUndoAlt } from '@fortawesome/free-solid-svg-icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { addFilter, removeFilter, resetFilter } from '../../redux/actions';
 import FilterOptions from '../../components/FilterOptions';
@@ -35,13 +35,10 @@ const FilterModal = () => {
     <div className="modal-div">
       <button className="filter-btn" type="button" onClick={toggleModal}><FontAwesomeIcon icon={faFilter}>Filter</FontAwesomeIcon></button>
       <Modal isOpen={showModal} onRequestClose={toggleModal}>
-        <div>
-          <button type="button" onClick={toggleModal}>Close</button>
-
-          <div>
-            <h1>Filters</h1>
-            <button type="button" onClick={resetFiltersHandler}>Reset</button>
-          </div>
+        <div className="modal">
+          <button className="reset-btn" onClick={resetFiltersHandler} type="button"><FontAwesomeIcon icon={faUndoAlt}>Filter</FontAwesomeIcon></button>
+          <h1>Filter by years</h1>
+          <button className="close-btn" onClick={toggleModal} type="button"><FontAwesomeIcon icon={faTimesCircle}>Close Window</FontAwesomeIcon></button>
         </div>
         <FilterOptions handleChange={handleChange} isChecked={isChecked} />
       </Modal>

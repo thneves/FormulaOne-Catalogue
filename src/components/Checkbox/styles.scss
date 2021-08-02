@@ -1,0 +1,17 @@
+.modal-checkbox {
+  padding: 2rem;
+  text-align: center;
+
+  label {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  input {
+    width: 1rem;
+    height: 1rem;
+  &:hover {
+    cursor: pointer;
+    }  
+  }
+}
