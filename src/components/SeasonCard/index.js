@@ -3,14 +3,9 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 
 const SeasonCard = ({ season }) => (
-  <div className="card">
-    <div className="card_image">
-      <img alt="logotipo" />
-      <Link to="/rankings" className="card-title">
-        <p>{ season }</p>
-      </Link>
-    </div>
-  </div>
+  <Link to="/rankings" className="card">
+    <p className="card-season">{ season }</p>
+  </Link>
 );
 
 SeasonCard.propTypes = {

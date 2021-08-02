@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { fetchSeasons } from '../../redux/thunk';
 import './styles.scss';
-import SeasonCard from '../../components/Season/index';
+import SeasonCard from '../../components/SeasonCard/index';
 import FilterModal from '../FilterModal';
 
 const SeasonsList = () => {
