@@ -22,6 +22,10 @@
       @media (max-width: 580px) {
         font-size: 1rem;
       }
+
+      @media(max-width: 420px) {
+        font-size: 0.9rem;
+      }
     }
   
     .back-icon {
@@ -37,6 +41,11 @@
       @media (max-width: 580px) {
         font-size: 1.5rem;
         margin-left: 1.5rem;
+      }
+
+      @media (max-wdith: 430px) {
+        font-size: 1.2rem;
+        margin-left: 0.2rem;
       }
     }
   }

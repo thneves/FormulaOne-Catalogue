@@ -7,12 +7,11 @@
 		-5px -5px 30px 7px rgba(0, 0, 0, 0.22);
 	cursor: pointer;
 	transition: 0.4s;
-	background-image: url(../../assets/images/card-image5.png);
-  background-size: cover;
   text-decoration: none;
 
 	.card-season {
-		font-size: 2.2rem;
+		font-size: 1.2rem;
+    margin: 0.262rem 0;
 		font-family: "Orbitron", sans-serif;
     letter-spacing: 2px;
 		font-weight: 700;
@@ -21,6 +20,13 @@
     text-decoration: none;
     font-style: none;
 	}
+
+  .card-image {
+    width: inherit;
+    height: 190px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
 
 	&:hover {
 		transform: scale(0.9, 0.9);
