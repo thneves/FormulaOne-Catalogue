@@ -1,17 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { displaySeason } from '../../redux/actions';
 import './styles.scss';
 
 const SeasonCard = ({ season }) => {
-  const [currentSeason, setCurrentSeason] = useState(0);
+  const year = season;
+  const dispatch = useDispatch();
 
   const handleClick = () => {
-    setCurrentSeason(currentSeason + season);
+    dispatch(displaySeason(year));
   };
 
   return (
-    <Link to="/rankings" className="card">
+    <Link to="/rankings" onClick={handleClick} className="card">
       <p className="card-season">{ season }</p>
     </Link>
   );
