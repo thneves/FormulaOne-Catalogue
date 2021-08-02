@@ -20,9 +20,9 @@ const fetchSeasons = () => {
     });
 };
 
-const fetchDrivers = () => {
+const fetchDrivers = season => {
   store.dispatch(fetchDriversRequest());
-  const requestDrivers = getDrivers();
+  const requestDrivers = getDrivers(season);
   requestDrivers.then(drivers => {
     store.dispatch(fetchDriversSuccess(drivers));
   })

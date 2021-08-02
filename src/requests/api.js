@@ -10,8 +10,8 @@ const getSeasons = async () => {
   throw Error(response.status);
 };
 
-const getDrivers = async () => {
-  const response = await axios.request(options.rankings);
+const getDrivers = async season => {
+  const response = await axios.request(options.rankings(season));
   if (response.status === 200) {
     const drivers = response.data.response;
     return drivers;

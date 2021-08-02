@@ -7,15 +7,10 @@ import './styles.scss';
 const RankingsList = () => {
   useEffect(() => {
     fetchDrivers();
-    // console.log('I fire once');
   }, []);
 
   const rankingState = useSelector(state => state.drivers.drivers);
-  console.log(rankingState);
   const bestEightRank = (rankingState.filter((driver, index) => index < 8));
-  console.log(bestEightRank);
-
-  // console.log(rankingState.driver);
 
   const printRanking = bestEightRank.map(driver => (
     <DriversRanking
