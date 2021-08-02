@@ -5,4 +5,16 @@
   padding: 3rem 10rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
+
+  @media (max-width: 992px) {
+    padding: 2.5rem 3rem;
+    grid-template-columns: repeat(2, minmax( 200px, 2fr));
+  }
+
+  @media (max-width: 580px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
