@@ -1,6 +1,6 @@
 import { DISPLAY_SEASON } from '../actions';
 
-const initialState = 0;
+export const initialState = 0;
 
 const currentSeason = (state = initialState, action) => {
   let newState;
