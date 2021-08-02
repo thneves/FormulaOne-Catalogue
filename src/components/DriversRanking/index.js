@@ -20,11 +20,11 @@ const DriversRanking = ({
         <span className="driver-name">
           {driver}
         </span>
-        <span>
+        <span className="points-wins">
           Points&nbsp;&nbsp;
           <strong>{ points }</strong>
         </span>
-        <span>
+        <span className="points-wins">
           Wins&nbsp;&nbsp;&nbsp;&nbsp;
           <strong>{ wins }</strong>
         </span>

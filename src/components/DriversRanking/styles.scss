@@ -25,6 +25,7 @@
   height: 88px;
   border-radius: 4px;
   border: 1px solid black;
+  margin: 0 1.3rem;
 }
 
 .driver-info {
@@ -42,7 +43,6 @@
     letter-spacing: 1px;
     font-weight: 700;
   }
-
 }
 
 .team-logo {
@@ -50,3 +50,60 @@
   height: 88px;
 }
 
+@media (max-width: 860px) {
+  .driver-card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 596px) {
+  .driver-card {
+    width: 80%;
+    height: 90px;
+    padding: 0.8rem;
+    margin: 1rem auto;
+  }
+
+  .driver-position {
+    font-size: 2rem;
+    width: 1.5rem;
+  }
+
+  .driver-image {
+    width: 60px;
+    height: 68px;
+    margin: 0 0.4rem;
+  }
+
+  .driver-info {
+    width: 25%;
+
+    .driver-name {
+      font-size: 0.8rem;
+      letter-spacing: 0.6px;
+    }
+
+    .points-wins {
+      font-size: 0.7rem;
+    }
+  }
+
+  .team-logo {
+    width: 95px;
+    height: 68px;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .driver-card {
+    width: 70%;
+  }
+  .driver-image{
+    display: none;
+  }
+
+  .driver-position {
+    width: 1.5rem;
+  }
+}
