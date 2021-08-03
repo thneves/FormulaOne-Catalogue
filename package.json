@@ -2,7 +2,8 @@
   "name": "formula-one-catalogue",
   "jest": {
     "moduleNameMapper": {
-      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+      "\\.(jpg|jpeg|png|svg)$": "identity-obj-proxy"
     }
   },
   "version": "0.1.0",
@@ -69,9 +70,11 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-react": "7.x",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.6",
-    "jest-css-modules-transform": "^4.3.0",
-    "@babel/preset-react": "7.x"
+    "jest-css-modules-transform": "^4.3.0"
   }
 }

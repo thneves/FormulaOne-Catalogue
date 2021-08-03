@@ -8,9 +8,9 @@ describe('actions creation', () => {
   it('should display the current season year', () => {
     store.dispatch(displaySeason(
       {
-        season: 2012
-      }
+        season: 2012,
+      },
     ));
     expect(store.getActions()).toMatchSnapshot();
-  })
-})
+  });
+});

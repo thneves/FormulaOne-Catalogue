@@ -5,13 +5,13 @@ const mockStore = configureMockStore();
 const store = mockStore({});
 
 describe('actions on seasons list', () => {
-  it('should request the Seasons ranking', () =>{
+  it('should request the Seasons ranking', () => {
     store.dispatch(fetchSeasonsRequest(
       {
         loading: true,
         seasons: {},
         error: '',
-      }
-    ))
-  })
-})
+      },
+    ));
+  });
+});
