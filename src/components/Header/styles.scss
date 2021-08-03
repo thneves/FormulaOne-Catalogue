@@ -1,38 +1,37 @@
 header {
-	background-image: url(../../assets/images/hero.png);
-	background-size: cover;
+  background-image: url(../../assets/images/hero.png);
+  background-size: cover;
   background-position: bottom center;
-
-	height: 40vh;
+  height: 40vh;
 
   .v2 {
     background-image: url(../../assets/images/logo.png);
   }
 
-	.nav {
-		padding: 1rem 3rem;
-		display: flex;
-		justify-content: space-between;
+  .nav {
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color: rgba(254, 255, 255, 0.39);
 
-		.logo {
-			width: 100px;
-			height: auto;
-		}
+    .logo {
+      width: 100px;
+      height: auto;
+    }
 
-		.links {
+    .links {
       align-items: flex-start;
-			display: flex;
-			gap: 1rem;
-      
+      display: flex;
+      gap: 1rem;
+
       a {
         font-size: 0.85rem;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         font-weight: lighter;
         text-decoration: none;
         color: azure;
       }
     }
-	}
+  }
 }

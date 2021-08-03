@@ -1,20 +1,22 @@
 .ranking {
   padding: 1rem 0;
-  background: rgb(98,97,98);
-  background: linear-gradient(rgba(98,97,98,1) 0%, rgba(65,64,64,1) 17%, rgba(23,23,22,1) 100%);  
-
+  background: rgb(98, 97, 98);
+  background:
+    linear-gradient(
+      rgba(98, 97, 98, 1) 0%,
+      rgba(65, 64, 64, 1) 17%,
+      rgba(23, 23, 22, 1) 100%
+    );
 
   .ranking-head {
-
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: left;
-    
 
     h3 {
       font-size: 1.5rem;
-      font-family: 'Orbitron', sans-serif;
+      font-family: "Orbitron", sans-serif;
       color: white;
       font-variant: small-caps;
       margin: 0 auto;
@@ -23,11 +25,11 @@
         font-size: 1rem;
       }
 
-      @media(max-width: 420px) {
+      @media (max-width: 420px) {
         font-size: 0.9rem;
       }
     }
-  
+
     .back-icon {
       font-size: 2rem;
       color: azure;
@@ -43,7 +45,7 @@
         margin-left: 1.5rem;
       }
 
-      @media (max-wdith: 430px) {
+      @media (max-width: 430px) {
         font-size: 1.2rem;
         margin-left: 0.2rem;
       }

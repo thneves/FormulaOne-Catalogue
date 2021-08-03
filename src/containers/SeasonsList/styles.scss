@@ -1,14 +1,19 @@
 .seasons-list {
-  background: rgb(98,97,98);
-  background: linear-gradient(360deg, rgba(98,97,98,1) 0%, rgba(65,64,64,0.9205883036808473) 50%, rgba(23,23,22,1) 100%);
-
+  background: rgb(98, 97, 98);
+  background:
+    linear-gradient(
+      360deg,
+      rgba(98, 97, 98, 1) 0%,
+      rgba(65, 64, 64, 0.9205883036808473) 50%,
+      rgba(23, 23, 22, 1) 100%
+    );
   padding: 3rem 10rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
 
   @media (max-width: 992px) {
     padding: 2.5rem 3rem;
-    grid-template-columns: repeat(2, minmax( 200px, 2fr));
+    grid-template-columns: repeat(2, minmax(200px, 2fr));
   }
 
   @media (max-width: 580px) {
