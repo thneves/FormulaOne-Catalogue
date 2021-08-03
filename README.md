@@ -3,7 +3,6 @@
     <img width="140" src="./src/assets/images/logo.png" alt="Logo">
   </a>
 </p>
-<br>
 
 <h3 align="center">
 
