@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Loader 1`] = `
+<div
+  className="box"
+>
+  <div
+    className="Loader"
+  />
+</div>
+`;

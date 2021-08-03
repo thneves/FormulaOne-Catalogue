@@ -1,9 +1,14 @@
 .modal-form {
-  background: rgb(65,67,69);
-  background: linear-gradient(34deg, rgba(65,67,69,1) 0%, rgba(35,37,38,1) 100%);
+  background: rgb(65, 67, 69);
+  background:
+    linear-gradient(
+      34deg,
+      rgba(65, 67, 69, 1) 0%,
+      rgba(35, 37, 38, 1) 100%
+    );
   margin: 1rem;
   border-radius: 5px;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   color: azure;
 
   fieldset {

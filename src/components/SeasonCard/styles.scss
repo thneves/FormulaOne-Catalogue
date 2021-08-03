@@ -1,26 +1,26 @@
 .card {
-	margin: 30px auto 5rem auto;
-	width: 210px;
-	height: 210px;
-	border-radius: 40px;
-  background-color: rgb(34, 33, 33);
-	box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
-		-5px -5px 30px 7px rgba(0, 0, 0, 0.22);
-	cursor: pointer;
-	transition: 0.4s;
+  margin: 30px auto 5rem auto;
+  width: 210px;
+  height: 210px;
+  border-radius: 40px;
+  background-color: #222121;
+  box-shadow:
+    5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  transition: 0.4s;
   text-decoration: none;
 
-	.card-season {
-		font-size: 1.2rem;
+  .card-season {
+    font-size: 1.2rem;
     margin: 0.262rem 0;
-		font-family: "Orbitron", sans-serif;
+    font-family: "Orbitron", sans-serif;
     letter-spacing: 2px;
-		font-weight: 700;
-		color: white;
+    font-weight: 700;
+    color: white;
     text-align: center;
     text-decoration: none;
-    font-style: none;
-	}
+  }
 
   .card-image {
     width: inherit;
@@ -29,9 +29,10 @@
     border-bottom-right-radius: 40px;
   }
 
-	&:hover {
-		transform: scale(0.9, 0.9);
-		box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
-		-5px -5px 30px 15px rgba(0, 0, 0, 0.22);
-	}
+  &:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow:
+      5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+      -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+  }
 }

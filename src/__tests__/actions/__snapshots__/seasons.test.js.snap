@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should fetch seasons with failure 1`] = `
+Array [
+  Object {
+    "type": "FETCH_SEASONS_REQUEST",
+  },
+  Object {
+    "payload": Object {
+      "error": "",
+      "loading": false,
+      "seasons": Object {
+        "seasons": Array [
+          2012,
+          2013,
+        ],
+      },
+    },
+    "type": "FETCH_SEASONS_SUCCESS",
+  },
+  Object {
+    "payload": Object {
+      "error": "some error",
+      "loading": false,
+      "seasons": Object {},
+    },
+    "type": "FETCH_SEASONS_FAILURE",
+  },
+]
+`;
+
+exports[`should fetch seasons with success 1`] = `
+Array [
+  Object {
+    "type": "FETCH_SEASONS_REQUEST",
+  },
+  Object {
+    "payload": Object {
+      "error": "",
+      "loading": false,
+      "seasons": Object {
+        "seasons": Array [
+          2012,
+          2013,
+        ],
+      },
+    },
+    "type": "FETCH_SEASONS_SUCCESS",
+  },
+]
+`;
+
+exports[`should request the Seasons ranking 1`] = `
+Array [
+  Object {
+    "type": "FETCH_SEASONS_REQUEST",
+  },
+]
+`;

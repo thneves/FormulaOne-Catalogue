@@ -2,7 +2,7 @@ import {
   FETCH_DRIVERS_REQUEST, FETCH_DRIVERS_SUCCESS, FETCH_DRIVERS_FAILURE,
 } from '../actions';
 
-const initialState = {
+export const initialState = {
   loading: false,
   drivers: [],
   error: '',

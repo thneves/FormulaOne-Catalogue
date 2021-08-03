@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render filter options component 1`] = `
+<form
+  className="modal-form"
+>
+  <fieldset>
+    <div
+      className="modal-checkbox"
+    >
+      <label
+        htmlFor={2012}
+      >
+        2012
+        <input
+          defaultChecked={true}
+          id={2012}
+          onChange={[Function]}
+          type="checkbox"
+          value={2012}
+        />
+      </label>
+    </div>
+    <div
+      className="modal-checkbox"
+    >
+      <label
+        htmlFor={2013}
+      >
+        2013
+        <input
+          defaultChecked={true}
+          id={2013}
+          onChange={[Function]}
+          type="checkbox"
+          value={2013}
+        />
+      </label>
+    </div>
+    <div
+      className="modal-checkbox"
+    >
+      <label
+        htmlFor={2014}
+      >
+        2014
+        <input
+          defaultChecked={true}
+          id={2014}
+          onChange={[Function]}
+          type="checkbox"
+          value={2014}
+        />
+      </label>
+    </div>
+  </fieldset>
+</form>
+`;
