@@ -25,10 +25,14 @@ header {
       align-items: flex-start;
 			display: flex;
 			gap: 1rem;
-      font-size: 0.85rem;
-      font-family: 'Poppins', sans-serif;
-      font-weight: lighter;
-      color: azure;
+      
+      a {
+        font-size: 0.85rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: lighter;
+        text-decoration: none;
+        color: azure;
+      }
     }
 	}
 }

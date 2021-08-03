@@ -8,8 +8,8 @@ import SeasonsList from '../containers/SeasonsList/SeasonsList';
 
 const Routes = () => (
   <BrowserRouter>
+    <Header />
     <Switch>
-      <Route component={Header} />
       <Route path="/" component={SeasonsList} exact />
       <Route path="/rankings" component={RankingsList} />
     </Switch>
