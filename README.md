@@ -3,14 +3,11 @@
     <img width="140" src="./src/assets/images/logo.png" alt="Logo">
   </a>
 </p>
-
-
-<hr>
 <br>
 
 <h3 align="center">
 
-  **FORMULA ONE CATALOGUE**
+  **FORMULA 1 CATALOGUE**
 
 </h3>
 
@@ -37,7 +34,7 @@
 </p>
 
 ## Table of Contents
-- [🚀 About Formula One Catalogue](#🚀-about-formula-one-catalogue)
+- [🚀 About Formula 1 Catalogue](#🚀-about-formula-1-catalogue)
 - [⚒️ Built With React & Redux](#⚒️-built-with-react-&-redux)
 - [🟢 Live Demo](#🟢-live-demo)
 - [🖥️ Setup](#🖥️-setup)
@@ -51,9 +48,9 @@
 - [⭐ Show your support](#⭐-show-your-support)
 
 
-## 🚀 About Formula One Catalogue
+## 🚀 About Formula 1 Catalogue
 
-[**F1 Catalogue**](https://f1catalogue.netlify.app) is a web app where you can find the top 8 drivers ranking of the last formula one seasons. The ranking display info about each driver on the season, including the driver picture and team. It was build with React & Redux and [Rapid API](http://rapidapi.com) to retrieve all the necessary information.
+[**F1 Catalogue**](https://f1catalogue.netlify.app) is a web app where you can find the top 8 drivers ranking of the last Formula 1 seasons. The ranking display info about each driver on the season, including the driver picture and team. It was build with React & Redux and [Rapid API](http://rapidapi.com) to retrieve all the necessary information.
 
 <br>
 
