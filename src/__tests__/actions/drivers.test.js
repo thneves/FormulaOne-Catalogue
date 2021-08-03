@@ -23,7 +23,9 @@ it("should fetch drivers ranking with success", () => {
 	store.dispatch(
 		fetchDriversSuccess({
 			loading: false,
-			drivers: {},
+			drivers: {
+        name: "test driver"
+      },
 			error: "",
 		})
 	);

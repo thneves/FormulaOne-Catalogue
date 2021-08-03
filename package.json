@@ -1,5 +1,10 @@
 {
   "name": "formula-one-catalogue",
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,6 +20,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
+    "axios-mock-adapter": "^1.19.0",
     "classnames": "^2.3.1",
     "eslint-config-airbnb": "18.x",
     "eslint-plugin-import": "2.x",
@@ -29,6 +35,7 @@
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-test-renderer": "^17.0.2",
     "redux": "^4.1.0",
     "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.3.0",
@@ -62,7 +69,9 @@
     ]
   },
   "devDependencies": {
-    "babel-jest": "^27.0.6",
-    "jest": "^27.0.6"
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.6",
+    "jest-css-modules-transform": "^4.3.0",
+    "@babel/preset-react": "7.x"
   }
 }

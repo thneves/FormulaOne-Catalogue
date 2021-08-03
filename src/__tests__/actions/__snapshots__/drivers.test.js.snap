@@ -15,7 +15,9 @@ Array [
   },
   Object {
     "payload": Object {
-      "drivers": Object {},
+      "drivers": Object {
+        "name": "test driver",
+      },
       "error": "",
       "loading": false,
     },
@@ -39,7 +41,9 @@ Array [
   },
   Object {
     "payload": Object {
-      "drivers": Object {},
+      "drivers": Object {
+        "name": "test driver",
+      },
       "error": "",
       "loading": false,
     },
