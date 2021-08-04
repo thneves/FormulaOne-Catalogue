@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { fetchSeasons } from '../../redux/thunk';
-import './styles.scss';
-import SeasonCard from '../../components/SeasonCard/index';
-import FilterModal from '../FilterModal';
-import Loader from '../../components/Loader';
+import { fetchSeasons } from '../redux/thunk';
+import '../styles/containers/SeasonsLists.scss';
+import SeasonCard from '../components/SeasonCard';
+import FilterModal from './FilterModal';
+import Loader from '../components/Loader';
 
 const SeasonsList = () => {
   const seasonListState = useSelector(state => state.seasons.seasons);

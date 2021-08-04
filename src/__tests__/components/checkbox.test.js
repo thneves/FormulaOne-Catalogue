@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import * as redux from 'react-redux';
-import Checkbox from '../../components/Checkbox/index';
+import Checkbox from '../../components/Checkbox';
 
 const useSelectorMock = jest.spyOn(redux, 'useSelector');
 

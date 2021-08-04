@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import './styles.scss';
-import defaultJohn from '../../assets/images/defaultjohn.png';
+import '../styles/components/DriversRanking.scss';
+import defaultJohn from '../assets/images/defaultjohn.png';
 
 const DriversRanking = ({
   driver,

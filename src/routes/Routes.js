@@ -3,8 +3,8 @@ import {
   BrowserRouter, Route, Switch,
 } from 'react-router-dom';
 import Header from '../components/Header';
-import RankingsList from '../containers/RankingsList/RankingsList';
-import SeasonsList from '../containers/SeasonsList/SeasonsList';
+import RankingsList from '../containers/RankingsList';
+import SeasonsList from '../containers/SeasonsList';
 
 const Routes = () => (
   <BrowserRouter>

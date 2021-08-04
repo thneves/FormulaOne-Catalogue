@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-import './styles.scss';
+import '../styles/components/Checkbox.scss';
 
 const Checkbox = ({
   handleChange, checked,

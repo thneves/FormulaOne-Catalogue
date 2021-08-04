@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Checkbox from '../Checkbox';
-import './styles.scss';
+import Checkbox from './Checkbox';
+import '../styles/components/FilterOptions.scss';
 
 const FilterOptions = ({ handleChange, isChecked }) => (
 

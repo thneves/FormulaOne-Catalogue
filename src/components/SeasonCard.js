@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import { displaySeason } from '../../redux/actions';
-import './styles.scss';
-import RandomImage from '../../helpers/RandomImage';
+import { displaySeason } from '../redux/actions';
+import '../styles/components/SeasonCard.scss';
+import RandomImage from '../helpers/RandomImage';
 
 const SeasonCard = ({ season }) => {
   const year = season;

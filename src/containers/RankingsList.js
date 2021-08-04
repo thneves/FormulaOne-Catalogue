@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
-import { fetchDrivers } from '../../redux/thunk';
-import DriversRanking from '../../components/DriversRanking/index';
-import Loader from '../../components/Loader';
-import './styles.scss';
+import { fetchDrivers } from '../redux/thunk';
+import DriversRanking from '../components/DriversRanking';
+import Loader from '../components/Loader';
+import '../styles/containers/RankingsList.scss';
 
 const RankingsList = () => {
   const currentSeason = useSelector(state => state.currentSeason);
