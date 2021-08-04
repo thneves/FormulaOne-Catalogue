@@ -53,7 +53,7 @@
 
 <br>
 
-## 🧪 Built With React & Redux
+## 🧪 Built With
 
 [React](https://reactjs.org)
 
@@ -65,7 +65,6 @@
 
 [Rapid API](https://rapidapi.com)
 
-[Yarn](https://yarnpkg.com)
 
 <br>
 
@@ -93,7 +92,9 @@ Internet Browser
 
 [Git](https://git-scm.com/downloads) for version control.
 
-[Node.js](https://nodejs.org) to install dependencies and run scripts via `yarn`.
+[Node.js](https://nodejs.org) to install dependencies
+
+[Yarn](https://yarnpkg.com) to run scripts and install packages.
 
 ### Installation
 
