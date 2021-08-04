@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilter, faTimesCircle, faUndoAlt } from '@fortawesome/free-solid-svg-icons';
@@ -45,12 +44,5 @@ const FilterModal = () => {
     </div>
   );
 };
-
-// FilterModal.propTypes = {
-//   filters: PropTypes.instanceOf(Array).isRequired,
-//   addFilters: PropTypes.func.isRequired,
-//   removeFilters: PropTypes.func.isRequired,
-//   resetFilters: PropTypes.func.isRequired,
-// };
 
 export default FilterModal;
