@@ -12,6 +12,22 @@
   color: black;
   background-color: white;
   font-family: "Orbitron", sans-serif;
+  box-shadow:
+    5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  transition: 0.7s;
+
+  &:hover {
+    color: white;
+    background-color: black;
+    border-radius: 8px;
+    width: 47%;
+    height: 115px;
+    cursor: grabbing;
+    box-shadow:
+      5px 5px 30px 7px rgb(223, 213, 213),
+      -5px -5px 30px 7px rgba(223, 217, 217, 0.925);
+  }
 }
 
 .driver-position {
