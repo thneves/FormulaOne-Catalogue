@@ -1,0 +1,17 @@
+.team-image-ranking {
+  button {
+    background: transparent;
+    border: none;
+
+    img {
+      width: 175px;
+      height: 88px;
+
+      &:hover {
+        cursor: pointer;
+        border: 2px solid azure;
+        border-radius: 10px;
+      }
+    }
+  }
+}
