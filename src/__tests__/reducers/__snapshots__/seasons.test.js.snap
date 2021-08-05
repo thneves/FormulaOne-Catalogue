@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Seasons List Reducer should handle Fetch Seasons Failure 1`] = `
+Object {
+  "error": undefined,
+  "loading": false,
+  "seasons": Array [],
+}
+`;
+
+exports[`Seasons List Reducer should handle Fetch Seasons Request 1`] = `
+Object {
+  "error": "",
+  "loading": true,
+  "seasons": Array [],
+}
+`;
+
+exports[`Seasons List Reducer should handle Fetch Seasons Success 1`] = `
+Object {
+  "error": "",
+  "loading": false,
+  "seasons": undefined,
+}
+`;
+
+exports[`Seasons List Reducer should return the initial state 1`] = `
+Object {
+  "error": "",
+  "loading": false,
+  "seasons": Array [],
+}
+`;

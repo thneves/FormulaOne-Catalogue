@@ -1,0 +1,126 @@
+.driver-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  width: 50%;
+  max-width: 620px;
+  padding: 0 1rem;
+  margin: 2rem auto;
+  border: 2px solid azure;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  font-family: "Orbitron", sans-serif;
+  box-shadow:
+    5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  transition: 0.7s;
+
+  &:hover {
+    color: white;
+    background-color: transparent;
+    border-radius: 8px;
+    width: 47%;
+    height: 115px;
+    cursor: grabbing;
+    box-shadow:
+      5px 5px 30px 7px rgb(223, 213, 213),
+      -5px -5px 30px 7px rgba(223, 217, 217, 0.925);
+  }
+}
+
+.driver-position {
+  font-size: 4rem;
+  width: 3rem;
+  text-align: center;
+}
+
+.driver-image {
+  width: 80px;
+  height: 88px;
+  border-radius: 4px;
+  border: 1px solid black;
+  margin: 0 1.3rem;
+}
+
+.driver-info {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  text-align: left;
+
+  span {
+    margin: 4px 0;
+  }
+
+  .driver-name {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+}
+
+.team-logo {
+  width: 175px;
+  height: 88px;
+}
+
+@media (max-width: 860px) {
+  .driver-card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 596px) {
+  .driver-card {
+    width: 80%;
+    height: 90px;
+    padding: 0.8rem;
+    margin: 1rem auto;
+  }
+
+  .driver-position {
+    font-size: 2.2rem;
+    width: 1rem;
+    margin: 2px;
+  }
+
+  .driver-image {
+    width: 70px;
+    height: 78px;
+    margin: 0 2px;
+  }
+
+  .driver-info {
+    width: 38%;
+
+    .driver-name {
+      font-size: 0.8rem;
+      letter-spacing: 0.4px;
+    }
+
+    .points-wins {
+      font-size: 0.7rem;
+    }
+  }
+
+  .team-logo {
+    width: 95px;
+    height: 68px;
+  }
+}
+
+@media (max-width: 380px) {
+  .driver-card {
+    width: 70%;
+  }
+
+  .driver-image {
+    display: none;
+  }
+
+  .driver-position {
+    width: 1.5rem;
+  }
+}

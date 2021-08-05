@@ -1,70 +1,175 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="https://f1catalogue.netlify.app">
+    <img width="140" src="./src/assets/images/logo.png" alt="Logo">
+  </a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">
 
-## Available Scripts
+  **FORMULA 1 CATALOGUE**
 
-In the project directory, you can run:
+</h3>
 
-### `yarn start`
+<p align="center">
+  <strong>Web App created by Thales Neves</strong>
+  <br>
+  Project created using <a href="https://rapidapi.com">Rapid API</a> and <a href="https://reactjs.org">React</a> & <a href="http://redux.js.org">Redux</a>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center">
+  <a href="https://f1catalogue.netlify.app">
+    <img src="https://img.shields.io/badge/OPEN%20app%20-darkred?style=for-the-badge">
+  </a>
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<p align="center">
+  <a href="https://github.com/thneves/FormulaOne-Catalogue/issues">
+    <img src="https://img.shields.io/badge/REPORT%20A%20BUG-royalblue?style=for-the-badge">
+  </a>
+   ‎ ‎ ‎ ‎
+  <a href="https://github.com/thneves/FormulaOne-Catalogue/issues">
+    <img src="https://img.shields.io/badge/Request%20a%20feature-royalblue?style=for-the-badge">
+  </a>
+</p>
 
-### `yarn test`
+## Table of Contents
+- [🚀 About Formula 1 Catalogue](#🚀-about-formula-1-catalogue)
+- [⚒️ Built With React & Redux](#⚒️-built-with-react-&-redux)
+- [🟢 Live Demo](#🟢-live-demo)
+- [🖥️ Setup](#🖥️-setup)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [API KEYS](#api-keys-and-env-variables)
+  - [Run The Project](#run-the-project)
+  - [Tests](#testing-code)
+- [👤 Author](#👤-author)
+- [🤝 Contributing](#🤝-contributing)
+- [⭐ Show your support](#⭐-show-your-support)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## 🚀 About Formula 1 Catalogue
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[**F1 Catalogue**](https://f1catalogue.netlify.app) is a web app where you can find the top 8 drivers ranking of the last Formula 1 seasons. The ranking display info about each driver on the season, including the driver picture and team. It was build with React & Redux and [Rapid API](http://rapidapi.com) to retrieve all the necessary information.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🧪 Built With
 
-### `yarn eject`
+[React](https://reactjs.org)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[Redux](http://redux.js.org)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Netlify](https://netlify.com)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[Axios](https://axios-http)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[Rapid API](https://rapidapi.com)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🟢 Live
 
-### Code Splitting
+<h3>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  [Formula One Catalogue](https://f1catalogue.netlify.app)
 
-### Analyzing the Bundle Size
+</h3>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<a href="https://f1catalogue.netlify.app">
+  <img src="./screenshot.png">
+</a>
 
-### Making a Progressive Web App
+<br>
+<br>
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🖥️ Setup
 
-### Advanced Configuration
+### Requirements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Internet Browser
 
-### Deployment
+[Git](https://git-scm.com/downloads) for version control.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+[Node.js](https://nodejs.org) to install dependencies
 
-### `yarn build` fails to minify
+[Yarn](https://yarnpkg.com) to run scripts and install packages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Installation
+
+Open the terminal inside a folder of your choice and clone this repository using the following [Git](https://git-scm.com/downloads) commands in the terminal:
+
+```
+    git clone https://github.com/thneves/FormulaOne-Catalogue.git
+```
+
+Then, enter the project folder using:
+
+```
+    cd FormulaOne-Catalogue
+```
+
+To be able to run the web app you need to install Node dependencies by typing the following command on your terminal:
+
+```
+    yarn install
+```
+
+Done!
+
+### API KEYS and ENV variables.
+
+Go to [Rapid API](https://rapidapi.com/api-sports/api/api-formula-1/) create and account and get your own Formula 1 API Key,
+
+To be able to create your own environmental variables you need to create a `.env` file in the root of the project.
+
+You need to name the variable with the follow prefix `REACT_APP_`.
+
+Like so
+
+```
+  // .env
+
+  REACT_APP_API_KEY=3281772
+```
+Now you're ready to start the project
+### Run The Project
+
+Now that you've installed the repository and have the api key. Type the following to start the project:
+
+```
+    yarn start
+```
+
+This command will open a `localhost:3000` server where it will be running the web app, you can close the server using CTRL + C.
+
+
+### Testing Code
+
+To check all the test coverage made in the project application run the following command:
+
+```
+    yarn test
+```
+
+
+**Enjoy!**
+
+## 👤 Author
+
+ **Thales Neves**
+
+- Github: [thneves](https://github.com/thneves)
+- Twitter: [@tsneves11](https://twitter.com/tsneves11)
+- LinkedIn: [Thales Neves]([(https://www.linkedin.com/in/thales-neves10/))
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/thneves/FormulaOne-Catalogue).
+
+## ⭐ Show your support
+
+Give a ⭐️ if you like this project!

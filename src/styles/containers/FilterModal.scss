@@ -1,0 +1,75 @@
+.modal-div {
+  text-align: center;
+  padding: 1rem 0;
+  background: rgb(98, 97, 98);
+  background:
+    linear-gradient(
+      208deg,
+      rgba(98, 97, 98, 1) 0%,
+      rgba(65, 64, 64, 0.9205883036808473) 78%,
+      rgba(23, 23, 22, 1) 100%
+    );
+
+  .filter-btn {
+    background-color: transparent;
+    color: azure;
+    font-size: 1.3rem;
+    padding: 12px;
+    border-radius: 50%;
+    transition: 1.8s;
+
+    &:hover {
+      border-radius: 1px;
+      border-color: rgb(165, 42, 42);
+      color: rgb(165, 42, 42);
+      cursor: pointer;
+      background: azure;
+    }
+  }
+}
+
+.modal {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  padding: 2rem;
+  font-family: "Orbitron", sans-serif;
+  background: rgb(65, 67, 69);
+  background:
+    linear-gradient(
+      201deg,
+      rgba(65, 67, 69, 1) 0%,
+      rgba(35, 37, 38, 1) 100%
+    );
+
+  h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: azure;
+    padding: 0.5rem;
+  }
+
+  .reset-btn,
+  .close-btn {
+    font-size: 3rem;
+    padding: 1rem;
+    border: 2px solid azure;
+    background: transparent;
+    transition: 0.6s;
+    color: white;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .close-btn:hover {
+    color: brown;
+    border-color: brown;
+  }
+
+  .reset-btn:hover {
+    color: green;
+    border-color: green;
+  }
+}

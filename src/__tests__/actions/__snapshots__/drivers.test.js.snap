@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should fetch drivers ranking request 1`] = `
+Array [
+  Object {
+    "type": "FETCH_DRIVERS_REQUEST",
+  },
+]
+`;
+
+exports[`should fetch drivers ranking with failure 1`] = `
+Array [
+  Object {
+    "type": "FETCH_DRIVERS_REQUEST",
+  },
+  Object {
+    "payload": Object {
+      "drivers": Object {
+        "name": "test driver",
+      },
+      "error": "",
+      "loading": false,
+    },
+    "type": "FETCH_DRIVERS_SUCCESS",
+  },
+  Object {
+    "payload": Object {
+      "drivers": Object {},
+      "error": "some error",
+      "loading": false,
+    },
+    "type": "FETCH_DRIVERS_FAILURE",
+  },
+]
+`;
+
+exports[`should fetch drivers ranking with success 1`] = `
+Array [
+  Object {
+    "type": "FETCH_DRIVERS_REQUEST",
+  },
+  Object {
+    "payload": Object {
+      "drivers": Object {
+        "name": "test driver",
+      },
+      "error": "",
+      "loading": false,
+    },
+    "type": "FETCH_DRIVERS_SUCCESS",
+  },
+]
+`;

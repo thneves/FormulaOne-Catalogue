@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions creation should display the current season year 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "season": 2012,
+    },
+    "type": "DISPLAY_SEASON",
+  },
+]
+`;

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Drivers Ranking Reducer should handle Fetch Drivers Failure 1`] = `
+Object {
+  "drivers": Array [],
+  "error": undefined,
+  "loading": false,
+}
+`;
+
+exports[`Drivers Ranking Reducer should handle Fetch Drivers Request 1`] = `
+Object {
+  "drivers": Array [],
+  "error": "",
+  "loading": true,
+}
+`;
+
+exports[`Drivers Ranking Reducer should handle Fetch Drivers Sucess 1`] = `
+Object {
+  "drivers": undefined,
+  "error": "",
+  "loading": false,
+}
+`;
+
+exports[`Drivers Ranking Reducer should return the initial state 1`] = `
+Object {
+  "drivers": Array [],
+  "error": "",
+  "loading": false,
+}
+`;

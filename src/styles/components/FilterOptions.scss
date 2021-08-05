@@ -1,0 +1,20 @@
+.modal-form {
+  background: rgb(65, 67, 69);
+  background:
+    linear-gradient(
+      34deg,
+      rgba(65, 67, 69, 1) 0%,
+      rgba(35, 37, 38, 1) 100%
+    );
+  margin: 1rem;
+  border-radius: 5px;
+  font-family: "Orbitron", sans-serif;
+  color: azure;
+
+  fieldset {
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(20px, 1fr));
+    padding: 2rem 0;
+  }
+}

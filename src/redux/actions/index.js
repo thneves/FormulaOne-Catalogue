@@ -1,0 +1,21 @@
+export const FETCH_SEASONS_REQUEST = 'FETCH_SEASONS_REQUEST';
+export const FETCH_SEASONS_SUCCESS = 'FETCH_SEASONS_SUCCESS';
+export const FETCH_SEASONS_FAILURE = 'FETCH_SEASONS_FAILURE';
+export const FETCH_DRIVERS_REQUEST = 'FETCH_DRIVERS_REQUEST';
+export const FETCH_DRIVERS_SUCCESS = 'FETCH_DRIVERS_SUCCESS';
+export const FETCH_DRIVERS_FAILURE = 'FETCH_DRIVERS_FAILURE';
+export const ADD_FILTER = 'ADD_FILTER';
+export const REMOVE_FILTER = 'REMOVE_FILTER';
+export const RESET_FILTER = 'RESET_FILTER';
+export const DISPLAY_SEASON = 'DISPLAY_SEASON';
+
+export const fetchSeasonsRequest = () => ({ type: FETCH_SEASONS_REQUEST });
+export const fetchSeasonsSuccess = seasons => ({ type: FETCH_SEASONS_SUCCESS, payload: seasons });
+export const fetchSeasonsFailure = error => ({ type: FETCH_SEASONS_FAILURE, payload: error });
+export const fetchDriversRequest = () => ({ type: FETCH_DRIVERS_REQUEST });
+export const fetchDriversSuccess = drivers => ({ type: FETCH_DRIVERS_SUCCESS, payload: drivers });
+export const fetchDriversFailure = error => ({ type: FETCH_DRIVERS_FAILURE, payload: error });
+export const addFilter = filter => ({ type: ADD_FILTER, payload: filter });
+export const removeFilter = filter => ({ type: REMOVE_FILTER, payload: filter });
+export const resetFilter = filter => ({ type: RESET_FILTER, payload: filter });
+export const displaySeason = season => ({ type: DISPLAY_SEASON, payload: season });

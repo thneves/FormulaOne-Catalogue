@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Current Season Reducer should handle the displayed season 1`] = `undefined`;
+
+exports[`Current Season Reducer should return initial state 1`] = `0`;

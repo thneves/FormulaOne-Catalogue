@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Drivers Ranking 1`] = `
+<div
+  className="driver-card"
+>
+  <span
+    className="driver-position"
+  >
+    1
+  </span>
+  <img
+    alt="driver profile"
+    className="driver-image"
+    onError={[Function]}
+    src="driver image"
+  />
+  <div
+    className="driver-info"
+  >
+    <span
+      className="driver-name"
+    >
+      John Doe
+    </span>
+    <span
+      className="points-wins"
+    >
+      Points  
+      <strong>
+        999
+      </strong>
+    </span>
+    <span
+      className="points-wins"
+    >
+      Wins    
+      <strong>
+        10
+      </strong>
+    </span>
+  </div>
+  <img
+    alt="team logo"
+    className="team-logo"
+    src="team logo image"
+  />
+</div>
+`;
