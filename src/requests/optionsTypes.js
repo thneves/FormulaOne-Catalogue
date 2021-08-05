@@ -17,4 +17,14 @@ const rankings = season => ({
   },
 });
 
-export { seasons, rankings };
+const teamInfo = team => ({
+  method: 'GET',
+  url: 'https://api-formula-1.p.rapidapi.com/teams',
+  params: { team },
+  headers: {
+    'x-rapidapi-key': process.env.REACT_APP_API_KEY,
+    'x-rapidapi-host': 'api-formula-1.p.rapidapi.com',
+  },
+});
+
+export { seasons, rankings, teamInfo };

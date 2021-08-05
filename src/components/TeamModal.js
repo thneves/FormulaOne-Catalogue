@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { getTeamInfo } from '../requests/api';
 import '../styles/components/TeamModal.scss';
 
 const TeamModal = ({ image }) => {
@@ -10,6 +11,8 @@ const TeamModal = ({ image }) => {
 
   const toggleModal = () => {
     setShowModal(!showModal);
+    const info = getTeamInfo('petron');
+    console.log(info);
   };
 
   Modal.setAppElement('body');

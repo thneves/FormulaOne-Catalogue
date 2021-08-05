@@ -8,6 +8,7 @@ export const ADD_FILTER = 'ADD_FILTER';
 export const REMOVE_FILTER = 'REMOVE_FILTER';
 export const RESET_FILTER = 'RESET_FILTER';
 export const DISPLAY_SEASON = 'DISPLAY_SEASON';
+export const SHOW_TEAM_INFO = 'SHOW_TEAM_INFO';
 
 export const fetchSeasonsRequest = () => ({ type: FETCH_SEASONS_REQUEST });
 export const fetchSeasonsSuccess = seasons => ({ type: FETCH_SEASONS_SUCCESS, payload: seasons });
@@ -19,3 +20,4 @@ export const addFilter = filter => ({ type: ADD_FILTER, payload: filter });
 export const removeFilter = filter => ({ type: REMOVE_FILTER, payload: filter });
 export const resetFilter = filter => ({ type: RESET_FILTER, payload: filter });
 export const displaySeason = season => ({ type: DISPLAY_SEASON, payload: season });
+export const showTeamInfo = team => ({ type: SHOW_TEAM_INFO, payload: team });
