@@ -1,11 +1,28 @@
-import { SHOW_TEAM_INFO } from '../actions';
+import { FETCH_TEAM_REQUEST, FETCH_TEAM_SUCCESS, FETCH_TEAM_FAILURE } from '../actions';
 
-const teamInfoReducer = (state = '', action) => {
-  let newState;
+const initialState = {
+  loading: true,
+  team: {},
+  error: '',
+};
+
+const teamInfoReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SHOW_TEAM_INFO:
-      newState = action.payload;
-      return newState;
+    case FETCH_TEAM_REQUEST:
+      return { ...state, loading: false };
+    case FETCH_TEAM_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        team: action.payload,
+      };
+    case FETCH_TEAM_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        team: {},
+        error: action.payload,
+      };
     default:
       return state;
   }

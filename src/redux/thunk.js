@@ -6,8 +6,11 @@ import {
   fetchDriversRequest,
   fetchDriversSuccess,
   fetchDriversFailure,
+  fetchTeamRequest,
+  fetchTeamSuccess,
+  fetchTeamFailure,
 } from './actions';
-import { getSeasons, getDrivers } from '../requests/api';
+import { getSeasons, getDrivers, getTeamInfo } from '../requests/api';
 
 const fetchSeasons = () => {
   store.dispatch(fetchSeasonsRequest());
@@ -30,5 +33,16 @@ const fetchDrivers = season => {
       store.dispatch(fetchDriversFailure(error.message));
     });
 };
+
+const fetchTeam = team => {
+  store.dispatch(fetchTeamRequest());
+  const requestTeam = getTeamInfo(team);
+  requestTeam.then(team => {
+    store.dispatch(fetchTeamSuccess(team));
+  })
+    .catch(error => {
+      store.dispatch(fetchTeamFailure(error.message))
+    })
+}
 
 export { fetchSeasons, fetchDrivers };
