@@ -53,6 +53,12 @@
 .team-logo {
   width: 170px;
   height: 80px;
+
+  &:hover {
+    cursor: pointer;
+    border: 2px solid azure;
+    border-radius: 8px;
+  }
 }
 
 .driver-info {

@@ -33,8 +33,7 @@ const DriversRanking = ({
             <strong>{ wins }</strong>
           </span>
         </div>
-        <img className="team-logo" src={teamLogo} alt="ola" />
-        <TeamModal />
+        <TeamModal image={teamLogo} />
       </div>
     </>
   );

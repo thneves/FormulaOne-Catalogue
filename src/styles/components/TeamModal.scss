@@ -1,17 +1,28 @@
-.team-image-ranking {
-  button {
-    background: transparent;
-    border: none;
+.modal-btn-open {
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+}
 
-    img {
-      width: 175px;
-      height: 88px;
+.info-team-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-family: 'Orbitron', sans-serif;
+  width: 50%;
 
-      &:hover {
-        cursor: pointer;
-        border: 2px solid azure;
-        border-radius: 10px;
-      }
-    }
+  .big-logo {
+    width: 33%;
+    height: auto;
+  }
+
+  span {
+    font-size: 1rem;
+    padding: 1rem 0 1rem 1rem;
+    margin: 0.3rem;
+    width: 50%;
+    border: 1px solid black;
   }
 }
