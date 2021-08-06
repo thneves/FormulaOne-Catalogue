@@ -23,5 +23,5 @@ export const removeFilter = filter => ({ type: REMOVE_FILTER, payload: filter })
 export const resetFilter = filter => ({ type: RESET_FILTER, payload: filter });
 export const displaySeason = season => ({ type: DISPLAY_SEASON, payload: season });
 export const fetchTeamRequest = () => ({ type: FETCH_TEAM_REQUEST });
-export const fetchTeamSuccess = team => ({ type: FETCH_DRIVERS_SUCCESS, payload: team });
-export const fetchTeamFailure = error => ({ type: FETCH_DRIVERS_SUCCESS, payload: error });
+export const fetchTeamSuccess = team => ({ type: FETCH_TEAM_SUCCESS, payload: team });
+export const fetchTeamFailure = error => ({ type: FETCH_TEAM_SUCCESS, payload: error });

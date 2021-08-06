@@ -41,8 +41,8 @@ const fetchTeam = team => {
     store.dispatch(fetchTeamSuccess(team));
   })
     .catch(error => {
-      store.dispatch(fetchTeamFailure(error.message))
-    })
-}
+      store.dispatch(fetchTeamFailure(error.message));
+    });
+};
 
-export { fetchSeasons, fetchDrivers };
+export { fetchSeasons, fetchDrivers, fetchTeam };

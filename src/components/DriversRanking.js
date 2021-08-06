@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/components/DriversRanking.scss';
 import defaultJohn from '../assets/images/defaultjohn.png';
@@ -11,8 +12,7 @@ const DriversRanking = ({
   wins,
   teamLogo,
 }) => {
-  console.log('qualquer mierda');
-
+  console.log('breath');
   return (
     <>
       <div className="driver-card">
@@ -33,7 +33,8 @@ const DriversRanking = ({
             <strong>{ wins }</strong>
           </span>
         </div>
-        <TeamModal image={teamLogo} />
+        <img className="team-logo" src={teamLogo} alt="ola" />
+        <TeamModal />
       </div>
     </>
   );

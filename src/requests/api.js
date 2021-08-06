@@ -22,8 +22,9 @@ const getDrivers = async season => {
 const getTeamInfo = async team => {
   const response = await axios.request(options.teamInfo(team));
   if (response.status === 200) {
-    const details = response.data.response;
-    return details;
+    const team = response.data.response;
+    console.log(team);
+    return team;
   }
   throw Error(response.status);
 };

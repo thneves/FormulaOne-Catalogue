@@ -1,15 +1,15 @@
 import { FETCH_TEAM_REQUEST, FETCH_TEAM_SUCCESS, FETCH_TEAM_FAILURE } from '../actions';
 
 const initialState = {
-  loading: true,
-  team: {},
+  loading: false,
+  team: [],
   error: '',
 };
 
 const teamInfoReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_TEAM_REQUEST:
-      return { ...state, loading: false };
+      return { ...state, loading: true };
     case FETCH_TEAM_SUCCESS:
       return {
         ...state,
@@ -20,7 +20,7 @@ const teamInfoReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        team: {},
+        team: [],
         error: action.payload,
       };
     default:

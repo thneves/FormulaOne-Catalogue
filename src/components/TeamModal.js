@@ -1,37 +1,35 @@
-import React, { useState } from 'react';
 import Modal from 'react-modal';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
-import { getTeamInfo } from '../requests/api';
+import { useSelector } from 'react-redux';
 import '../styles/components/TeamModal.scss';
+import { fetchTeam } from '../redux/thunk';
 
-const TeamModal = ({ image }) => {
+const TeamModal = () => {
   const [showModal, setShowModal] = useState(false);
+  const teamState = useSelector(state => state.showTeam);
 
   const toggleModal = () => {
     setShowModal(!showModal);
-    const info = getTeamInfo('petron');
-    console.log(info);
+  };
+
+  const handleOpenModal = () => {
+    console.log(teamState);
+    fetchTeam('petron');
   };
 
   Modal.setAppElement('body');
 
   return (
-    <div className="team-image-ranking">
-      <button type="button" onClick={toggleModal}><img src={image} alt="team logo" /></button>
-      <Modal isOpen={showModal} onRequestClose={toggleModal}>
-        <div className="modal">
-          <h1>Team Info </h1>
-          <button className="close-btn" onClick={toggleModal} type="button"><FontAwesomeIcon icon={faTimesCircle}>Close Window</FontAwesomeIcon></button>
-        </div>
+    <div>
+      <button type="button" onClick={toggleModal}>open modal </button>
+      <Modal isOpen={showModal} onAfterOpen={handleOpenModal} onRequestClose={toggleModal}>
+        <h1>Team Info </h1>
+        <button onClick={toggleModal} type="button"><FontAwesomeIcon icon={faTimesCircle}>Close Window</FontAwesomeIcon></button>
       </Modal>
     </div>
   );
-};
-
-TeamModal.propTypes = {
-  image: PropTypes.string.isRequired,
 };
 
 export default TeamModal;
