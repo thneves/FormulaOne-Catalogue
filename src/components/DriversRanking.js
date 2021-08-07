@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/components/DriversRanking.scss';
+import Modal from 'react-modal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import '../styles/components/TeamModal.scss';
 import defaultJohn from '../assets/images/defaultjohn.png';
-import TeamModal from './TeamModal';
+import { fetchTeam } from '../redux/thunk';
+import TeamDetails from './TeamDetail';
 
 const DriversRanking = ({
   driver,
@@ -12,7 +17,28 @@ const DriversRanking = ({
   wins,
   teamLogo,
 }) => {
-  console.log('breath');
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+    fetchTeam(1);
+  };
+
+  Modal.setAppElement('body');
+
+  if (showModal) {
+    console.log('why');
+    return (
+      <Modal isOpen={showModal} onRequestClose={toggleModal}>
+        <div className="modal">
+          <h1>Team Info </h1>
+          <button onClick={toggleModal} className="close-btn" type="button"><FontAwesomeIcon icon={faTimesCircle}>Close Window</FontAwesomeIcon></button>
+        </div>
+        <TeamDetails canRender={showModal} />
+      </Modal>
+    );
+  }
+
   return (
     <>
       <div className="driver-card">
@@ -33,7 +59,7 @@ const DriversRanking = ({
             <strong>{ wins }</strong>
           </span>
         </div>
-        <TeamModal image={teamLogo} />
+        <button type="button" onClick={toggleModal}><img src={teamLogo} className="team-logo" alt="team logo" /></button>
       </div>
     </>
   );

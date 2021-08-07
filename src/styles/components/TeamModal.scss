@@ -4,25 +4,31 @@
   background: transparent;
 }
 
-.info-team-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  font-family: 'Orbitron', sans-serif;
-  width: 50%;
+.info-team-box {
+  border: 10px solid rgba(35, 37, 38, 1);
+  margin: 1rem;
+  padding: 0.5rem;
 
-  .big-logo {
-    width: 33%;
-    height: auto;
-  }
-
-  span {
-    font-size: 1rem;
-    padding: 1rem 0 1rem 1rem;
-    margin: 0.3rem;
+  .info-team-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-family: 'Orbitron', sans-serif;
     width: 50%;
-    border: 1px solid black;
+
+    .big-logo {
+      width: 50%;
+      height: auto;
+    }
+
+    span {
+      font-size: 1rem;
+      padding: 1rem 0 1rem 1rem;
+      margin: 0.3rem;
+      width: 50%;
+      border: 1px solid black;
+    }
   }
 }
