@@ -11,6 +11,9 @@ export const DISPLAY_SEASON = 'DISPLAY_SEASON';
 export const FETCH_TEAM_REQUEST = 'FETCH_TEAM_REQUEST';
 export const FETCH_TEAM_SUCCESS = 'FETCH_TEAM_SUCCESS';
 export const FETCH_TEAM_FAILURE = 'FETCH_TEAM_FAILURE';
+export const FETCH_DRIVER_REQUEST = 'FETCH_DRIVER_REQUEST';
+export const FETCH_DRIVER_SUCCESS = 'FETCH_DRIVER_SUCCESS';
+export const FETCH_DRIVER_FAILURE = 'FETCH_DRIVER_FAILURE';
 
 export const fetchSeasonsRequest = () => ({ type: FETCH_SEASONS_REQUEST });
 export const fetchSeasonsSuccess = seasons => ({ type: FETCH_SEASONS_SUCCESS, payload: seasons });
@@ -25,3 +28,6 @@ export const displaySeason = season => ({ type: DISPLAY_SEASON, payload: season 
 export const fetchTeamRequest = () => ({ type: FETCH_TEAM_REQUEST });
 export const fetchTeamSuccess = team => ({ type: FETCH_TEAM_SUCCESS, payload: team });
 export const fetchTeamFailure = error => ({ type: FETCH_TEAM_SUCCESS, payload: error });
+export const fetchDriverRequest = () => ({ type: FETCH_DRIVER_REQUEST });
+export const fetchDriverSuccess = driver => ({ type: FETCH_DRIVER_SUCCESS, payload: driver });
+export const fetchDriverFailure = error => ({ type: FETCH_DRIVER_FAILURE, payload: error });
