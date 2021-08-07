@@ -15,6 +15,7 @@ const teamInfoReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         team: action.payload,
+        error: '',
       };
     case FETCH_TEAM_FAILURE:
       return {
