@@ -4,7 +4,6 @@ import '../styles/components/DriversRanking.scss';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
-import '../styles/components/TeamModal.scss';
 import defaultJohn from '../assets/images/defaultjohn.png';
 import { fetchTeam, fetchOneDriver } from '../redux/thunk';
 import TeamDetails from './TeamDetails';
@@ -48,7 +47,7 @@ const DriversRanking = ({
         <span className="driver-position">
           { position }
         </span>
-        <img className="driver-image" onError={e => { e.target.src = defaultJohn; }} src={driverImg} alt="driver profile" />
+        <button className="driver-btn" type="button" onClick={toggleModal}><img className="driver-image" onError={e => { e.target.src = defaultJohn; }} src={driverImg} alt="driver profile" /></button>
         <div className="driver-info">
           <span className="driver-name">
             {driver}
@@ -62,7 +61,7 @@ const DriversRanking = ({
             <strong>{ wins }</strong>
           </span>
         </div>
-        <button type="button" onClick={toggleModal}><img src={teamLogo} className="team-logo" alt="team logo" /></button>
+        <button className="team-btn" type="button" onClick={toggleModal}><img src={teamLogo} className="team-logo" alt="team logo" /></button>
       </div>
     </>
   );
