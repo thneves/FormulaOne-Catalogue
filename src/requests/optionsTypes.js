@@ -27,4 +27,16 @@ const teamInfo = team => ({
   },
 });
 
-export { seasons, rankings, teamInfo };
+const driverInfo = driver => ({
+  method: 'GET',
+  url: 'https://api-formula-1.p.rapidapi.com/drivers',
+  params: { id: driver },
+  headers: {
+    'x-rapidapi-key': process.env.REACT_APP_API_KEY,
+    'x-rapidapi-host': 'api-formula-1.p.rapidapi.com',
+  },
+});
+
+export {
+  seasons, rankings, teamInfo, driverInfo,
+};
