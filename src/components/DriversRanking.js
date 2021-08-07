@@ -18,11 +18,36 @@ const DriversRanking = ({
   teamLogo,
 }) => {
   const [showModal, setShowModal] = useState(false);
+  const [renderTeam, setRenderTeam] = useState(false);
+  const [renderDriver, setRenderDriver] = useState(false);
 
-  const toggleModal = () => {
+  console.log(renderTeam);
+
+  const openModal = () => {
     setShowModal(!showModal);
+    console.log(renderTeam);
+  };
+
+  const closeModal = () => {
+    setShowModal(!showModal);
+    if (!renderTeam) {
+      setRenderDriver(!renderDriver);
+    } else if (!renderDriver) {
+      setRenderTeam(!renderTeam);
+    }
+  };
+
+  const openTeamDetails = () => {
+    openModal();
     fetchTeam(1);
+    setRenderTeam(!renderTeam);
+    console.log(renderTeam);
+  };
+
+  const openDriverDetails = () => {
+    openModal();
     fetchOneDriver(20);
+    setRenderDriver(!renderDriver);
   };
 
   Modal.setAppElement('body');
@@ -30,13 +55,16 @@ const DriversRanking = ({
   if (showModal) {
     console.log('why');
     return (
-      <Modal isOpen={showModal} onRequestClose={toggleModal}>
+      <Modal
+        isOpen={showModal}
+        onRequestClose={openModal}
+      >
         <div className="modal">
           <h1>Team Info </h1>
-          <button onClick={toggleModal} className="close-btn" type="button"><FontAwesomeIcon icon={faTimesCircle}>Close Window</FontAwesomeIcon></button>
+          <button onClick={closeModal} className="close-btn" type="button"><FontAwesomeIcon icon={faTimesCircle}>Close Window</FontAwesomeIcon></button>
         </div>
-        <TeamDetails canRender={showModal} />
-        <DriverDetails canRender={showModal} />
+        <TeamDetails renderTeam={renderTeam} />
+        <DriverDetails renderDriver={renderDriver} />
       </Modal>
     );
   }
@@ -47,7 +75,7 @@ const DriversRanking = ({
         <span className="driver-position">
           { position }
         </span>
-        <button className="driver-btn" type="button" onClick={toggleModal}><img className="driver-image" onError={e => { e.target.src = defaultJohn; }} src={driverImg} alt="driver profile" /></button>
+        <button className="driver-btn" type="button" onClick={openDriverDetails}><img className="driver-image" onError={e => { e.target.src = defaultJohn; }} src={driverImg} alt="driver profile" /></button>
         <div className="driver-info">
           <span className="driver-name">
             {driver}
@@ -61,7 +89,7 @@ const DriversRanking = ({
             <strong>{ wins }</strong>
           </span>
         </div>
-        <button className="team-btn" type="button" onClick={toggleModal}><img src={teamLogo} className="team-logo" alt="team logo" /></button>
+        <button className="team-btn" type="button" onClick={openTeamDetails}><img src={teamLogo} className="team-logo" alt="team logo" /></button>
       </div>
     </>
   );

@@ -3,9 +3,9 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import '../styles/components/TeamDetails.scss';
 
-const TeamDetails = ({ canRender }) => {
+const TeamDetails = ({ renderTeam }) => {
   const teamInfo = useSelector(state => state.showTeam.team[0]);
-  if (canRender && teamInfo !== undefined) {
+  if (renderTeam && teamInfo !== undefined) {
     return (
       <div className="info-team-box">
         <div className="info-team-div">
@@ -44,5 +44,5 @@ const TeamDetails = ({ canRender }) => {
 export default TeamDetails;
 
 TeamDetails.propTypes = {
-  canRender: PropTypes.bool.isRequired,
+  renderTeam: PropTypes.bool.isRequired,
 };

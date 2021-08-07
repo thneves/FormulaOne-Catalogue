@@ -3,9 +3,9 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import '../styles/components/DriverDetails.scss';
 
-const DriverDetails = ({ canRender }) => {
+const DriverDetails = ({ renderDriver }) => {
   const driverInfo = useSelector(state => state.showDriver.driver[0]);
-  if (canRender && driverInfo !== undefined) {
+  if (renderDriver && driverInfo !== undefined) {
     return (
       <div className="info-driver-box">
         <div className="info-driver-div">
@@ -34,5 +34,5 @@ const DriverDetails = ({ canRender }) => {
 export default DriverDetails;
 
 DriverDetails.propTypes = {
-  canRender: PropTypes.bool.isRequired,
+  renderDriver: PropTypes.bool.isRequired,
 };
