@@ -6,8 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import '../styles/components/TeamModal.scss';
 import defaultJohn from '../assets/images/defaultjohn.png';
-import { fetchTeam } from '../redux/thunk';
-import TeamDetails from './TeamDetail';
+import { fetchTeam, fetchOneDriver } from '../redux/thunk';
+import TeamDetails from './TeamDetails';
+import DriverDetails from './DriverDetails';
 
 const DriversRanking = ({
   driver,
@@ -22,6 +23,7 @@ const DriversRanking = ({
   const toggleModal = () => {
     setShowModal(!showModal);
     fetchTeam(1);
+    fetchOneDriver(20);
   };
 
   Modal.setAppElement('body');
@@ -35,6 +37,7 @@ const DriversRanking = ({
           <button onClick={toggleModal} className="close-btn" type="button"><FontAwesomeIcon icon={faTimesCircle}>Close Window</FontAwesomeIcon></button>
         </div>
         <TeamDetails canRender={showModal} />
+        <DriverDetails canRender={showModal} />
       </Modal>
     );
   }
