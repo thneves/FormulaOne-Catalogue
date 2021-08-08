@@ -14,6 +14,9 @@ export const FETCH_TEAM_FAILURE = 'FETCH_TEAM_FAILURE';
 export const FETCH_DRIVER_REQUEST = 'FETCH_DRIVER_REQUEST';
 export const FETCH_DRIVER_SUCCESS = 'FETCH_DRIVER_SUCCESS';
 export const FETCH_DRIVER_FAILURE = 'FETCH_DRIVER_FAILURE';
+export const FETCH_CIRCUITS_REQUEST = 'FETCH_CIRCUITS_REQUEST';
+export const FETCH_CIRCUITS_SUCCESS = 'FETCH_CIRCUITS_SUCCESS';
+export const FETCH_CIRCUITS_FAILURE = 'FETCH_CIRCUITS_FAILURE';
 
 export const fetchSeasonsRequest = () => ({ type: FETCH_SEASONS_REQUEST });
 export const fetchSeasonsSuccess = seasons => ({ type: FETCH_SEASONS_SUCCESS, payload: seasons });
@@ -31,3 +34,6 @@ export const fetchTeamFailure = error => ({ type: FETCH_TEAM_SUCCESS, payload: e
 export const fetchDriverRequest = () => ({ type: FETCH_DRIVER_REQUEST });
 export const fetchDriverSuccess = driver => ({ type: FETCH_DRIVER_SUCCESS, payload: driver });
 export const fetchDriverFailure = error => ({ type: FETCH_DRIVER_FAILURE, payload: error });
+export const fetchCircuitsRequest = () => ({ type: FETCH_CIRCUITS_REQUEST });
+export const fetchCircuitsSucces = circuits => ({ type: FETCH_CIRCUITS_SUCCESS, payload: circuits }); // eslint-disable-line max-len
+export const fetchCircuitsFailure = error => ({ type: FETCH_CIRCUITS_FAILURE, payload: error });
