@@ -38,7 +38,7 @@ const TeamDetails = ({ renderTeam }) => {
       </div>
     );
   }
-  return <div>Cannot get team info.</div>;
+  return <div />;
 };
 
 export default TeamDetails;
