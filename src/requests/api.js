@@ -38,9 +38,10 @@ const getDriverInfo = async driver => {
 };
 
 const getCircuits = async () => {
-  const response = await axios.requtes(options.circuits);
+  const response = await axios.request(options.circuits);
   if (response.status === 200) {
     const circuits = response.data.response;
+    console.log(circuits);
     return circuits;
   }
   throw Error(response.status);

@@ -1,0 +1,36 @@
+.circuit-list {
+  padding-top: 0.5rem;
+  background: rgb(98, 97, 98);
+  background:
+    linear-gradient(
+      360deg,
+      rgba(98, 97, 98, 1) 0%,
+      rgba(65, 64, 64, 0.9205883036808473) 50%,
+      rgba(23, 23, 22, 1) 100%
+    );
+  position: relative;
+
+  .circuit-head {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-bottom: 0.3rem;
+    color: rgb(78, 78, 78);
+
+    &:hover {
+      color: rgb(128, 136, 10);
+    }
+  }
+
+  .back-icon-circuit {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    font-size: 1.5rem;
+    color: azure;
+    transition: 0.7s;
+
+    &:hover {
+      color: green;
+    }
+  }
+}
