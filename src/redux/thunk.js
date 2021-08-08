@@ -12,9 +12,12 @@ import {
   fetchDriverRequest,
   fetchDriverSuccess,
   fetchDriverFailure,
+  fetchCircuitsRequest,
+  fetchCircuitsSucces,
+  fetchCircuitsFailure,
 } from './actions';
 import {
-  getSeasons, getDrivers, getTeamInfo, getDriverInfo,
+  getSeasons, getDrivers, getTeamInfo, getDriverInfo, getCircuits,
 } from '../requests/api';
 
 const fetchSeasons = () => {
@@ -61,6 +64,17 @@ const fetchOneDriver = driver => {
     });
 };
 
+const fetchCircuits = () => {
+  store.dispatch(fetchCircuitsRequest());
+  const requestCircuits = getCircuits();
+  requestCircuits.then(circuits => {
+    store.dispatch(fetchCircuitsSucces(circuits));
+  })
+    .catch(error => {
+      store.dispatch(fetchCircuitsFailure(error.message));
+    });
+};
+
 export {
-  fetchSeasons, fetchDrivers, fetchTeam, fetchOneDriver,
+  fetchSeasons, fetchDrivers, fetchTeam, fetchOneDriver, fetchCircuits,
 };
