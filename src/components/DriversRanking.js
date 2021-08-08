@@ -10,6 +10,8 @@ import TeamDetails from './TeamDetails';
 import DriverDetails from './DriverDetails';
 
 const DriversRanking = ({
+  driverId,
+  teamId,
   driver,
   driverImg,
   position,
@@ -34,15 +36,17 @@ const DriversRanking = ({
     }
   };
 
-  const openTeamDetails = () => {
+  const openTeamDetails = e => {
     openModal();
-    fetchTeam(1);
+    const id = Number(e.currentTarget.value);
+    fetchTeam(id);
     setRenderTeam(!renderTeam);
   };
 
-  const openDriverDetails = () => {
+  const openDriverDetails = e => {
     openModal();
-    fetchOneDriver(20);
+    const id = Number(e.currentTarget.value);
+    fetchOneDriver(id);
     setRenderDriver(!renderDriver);
   };
 
@@ -70,7 +74,9 @@ const DriversRanking = ({
         <span className="driver-position">
           { position }
         </span>
-        <button className="driver-btn" type="button" onClick={openDriverDetails}><img className="driver-image" onError={e => { e.target.src = defaultJohn; }} src={driverImg} alt="driver profile" /></button>
+        <button className="driver-btn" value={driverId} type="button" onClick={openDriverDetails}>
+          <img className="driver-image" onError={e => { e.target.src = defaultJohn; }} src={driverImg} alt="driver profile" />
+        </button>
         <div className="driver-info">
           <span className="driver-name">
             {driver}
@@ -84,7 +90,9 @@ const DriversRanking = ({
             <strong>{ wins }</strong>
           </span>
         </div>
-        <button className="team-btn" type="button" onClick={openTeamDetails}><img src={teamLogo} className="team-logo" alt="team logo" /></button>
+        <button className="team-btn" value={teamId} type="button" onClick={openTeamDetails}>
+          <img src={teamLogo} className="team-logo" alt="team logo" />
+        </button>
       </div>
     </>
   );
@@ -96,6 +104,8 @@ DriversRanking.defaultProps = {
 };
 
 DriversRanking.propTypes = {
+  driverId: PropTypes.number.isRequired,
+  teamId: PropTypes.number.isRequired,
   driver: PropTypes.string.isRequired,
   driverImg: PropTypes.string.isRequired,
   position: PropTypes.number.isRequired,
