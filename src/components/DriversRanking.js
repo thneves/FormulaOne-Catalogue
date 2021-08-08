@@ -21,11 +21,8 @@ const DriversRanking = ({
   const [renderTeam, setRenderTeam] = useState(false);
   const [renderDriver, setRenderDriver] = useState(false);
 
-  console.log(renderTeam);
-
   const openModal = () => {
     setShowModal(!showModal);
-    console.log(renderTeam);
   };
 
   const closeModal = () => {
@@ -41,7 +38,6 @@ const DriversRanking = ({
     openModal();
     fetchTeam(1);
     setRenderTeam(!renderTeam);
-    console.log(renderTeam);
   };
 
   const openDriverDetails = () => {
@@ -53,7 +49,6 @@ const DriversRanking = ({
   Modal.setAppElement('body');
 
   if (showModal) {
-    console.log('why');
     return (
       <Modal
         isOpen={showModal}

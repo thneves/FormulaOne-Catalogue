@@ -23,7 +23,6 @@ const getTeamInfo = async team => {
   const response = await axios.request(options.teamInfo(team));
   if (response.status === 200) {
     const team = response.data.response;
-    console.log(team);
     return team;
   }
   throw Error(response.status);
@@ -33,7 +32,6 @@ const getDriverInfo = async driver => {
   const response = await axios.request(options.driverInfo(driver));
   if (response.status === 200) {
     const driver = response.data.response;
-    console.log(driver);
     return driver;
   }
   throw Error(response.status);
