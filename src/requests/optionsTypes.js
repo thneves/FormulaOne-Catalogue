@@ -37,6 +37,15 @@ const driverInfo = driver => ({
   },
 });
 
+const circuits = {
+  method: 'GET',
+  url: 'https://api-formula-1.p.rapidapi.com/circuits',
+  headers: {
+    'x-rapidapi-key': '18c0bea2bamsh59fbdcd44740003p128fe7jsn13722813d4b6',
+    'x-rapidapi-host': 'api-formula-1.p.rapidapi.com',
+  },
+};
+
 export {
-  seasons, rankings, teamInfo, driverInfo,
+  seasons, rankings, teamInfo, driverInfo, circuits,
 };

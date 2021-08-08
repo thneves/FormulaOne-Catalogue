@@ -37,6 +37,15 @@ const getDriverInfo = async driver => {
   throw Error(response.status);
 };
 
+const getCircuits = async () => {
+  const response = await axios.requtes(options.circuits);
+  if (response.status === 200) {
+    const circuits = response.data.response;
+    return circuits;
+  }
+  throw Error(response.status);
+};
+
 export {
-  getSeasons, getDrivers, getTeamInfo, getDriverInfo,
+  getSeasons, getDrivers, getTeamInfo, getDriverInfo, getCircuits,
 };
