@@ -2,14 +2,17 @@ import { PropTypes } from 'prop-types';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import '../styles/components/DriverDetails.scss';
+import GetAge from '../helpers/GetAge';
+import defaultJohn from '../assets/images/defaultjohn.png';
 
 const DriverDetails = ({ renderDriver }) => {
   const driverInfo = useSelector(state => state.showDriver.driver[0]);
   if (renderDriver && driverInfo !== undefined) {
+    const age = GetAge(driverInfo.birthdate);
     return (
       <div className="info-driver-box">
         <div className="info-driver-div">
-          <img className="driver-big-picture" src={driverInfo.image} alt="driver big size" />
+          <img className="driver-big-picture" src={driverInfo.image} onError={e => { e.target.src = defaultJohn; }} alt="driver big size" />
           <div className="driver-info-details">
             <span>
               Name -&nbsp;
@@ -21,7 +24,7 @@ const DriverDetails = ({ renderDriver }) => {
             </span>
             <span>
               Age -&nbsp;
-              <strong>{driverInfo.birthdate}</strong>
+              <strong>{age}</strong>
             </span>
           </div>
         </div>
