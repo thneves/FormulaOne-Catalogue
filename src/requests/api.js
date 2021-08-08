@@ -19,4 +19,24 @@ const getDrivers = async season => {
   throw Error(response.status);
 };
 
-export { getSeasons, getDrivers };
+const getTeamInfo = async team => {
+  const response = await axios.request(options.teamInfo(team));
+  if (response.status === 200) {
+    const team = response.data.response;
+    return team;
+  }
+  throw Error(response.status);
+};
+
+const getDriverInfo = async driver => {
+  const response = await axios.request(options.driverInfo(driver));
+  if (response.status === 200) {
+    const driver = response.data.response;
+    return driver;
+  }
+  throw Error(response.status);
+};
+
+export {
+  getSeasons, getDrivers, getTeamInfo, getDriverInfo,
+};

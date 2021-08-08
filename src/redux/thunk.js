@@ -6,8 +6,16 @@ import {
   fetchDriversRequest,
   fetchDriversSuccess,
   fetchDriversFailure,
+  fetchTeamRequest,
+  fetchTeamSuccess,
+  fetchTeamFailure,
+  fetchDriverRequest,
+  fetchDriverSuccess,
+  fetchDriverFailure,
 } from './actions';
-import { getSeasons, getDrivers } from '../requests/api';
+import {
+  getSeasons, getDrivers, getTeamInfo, getDriverInfo,
+} from '../requests/api';
 
 const fetchSeasons = () => {
   store.dispatch(fetchSeasonsRequest());
@@ -31,4 +39,28 @@ const fetchDrivers = season => {
     });
 };
 
-export { fetchSeasons, fetchDrivers };
+const fetchTeam = team => {
+  store.dispatch(fetchTeamRequest());
+  const requestTeam = getTeamInfo(team);
+  requestTeam.then(team => {
+    store.dispatch(fetchTeamSuccess(team));
+  })
+    .catch(error => {
+      store.dispatch(fetchTeamFailure(error.message));
+    });
+};
+
+const fetchOneDriver = driver => {
+  store.dispatch(fetchDriverRequest());
+  const requestDriver = getDriverInfo(driver);
+  requestDriver.then(driver => {
+    store.dispatch(fetchDriverSuccess(driver));
+  })
+    .catch(error => {
+      store.dispatch(fetchDriverFailure(error.mesage));
+    });
+};
+
+export {
+  fetchSeasons, fetchDrivers, fetchTeam, fetchOneDriver,
+};

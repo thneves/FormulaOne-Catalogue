@@ -34,6 +34,8 @@ const RankingsList = () => {
       team={driver.team.name}
       teamLogo={driver.team.logo}
       wins={driver.wins}
+      driverId={driver.driver.id}
+      teamId={driver.team.id}
     />
   ));
 
