@@ -43,7 +43,7 @@ const RankingsList = () => {
     <>
       <div className="ranking">
         <div className="ranking-head">
-          <Link to="/" className="back-icon"><FontAwesomeIcon icon={faArrowCircleLeft}>Back</FontAwesomeIcon></Link>
+          <Link to="/seasons" className="back-icon"><FontAwesomeIcon icon={faArrowCircleLeft}>Back</FontAwesomeIcon></Link>
           <h3 className="ranking-text">
             Best 8 drivers - Season
             {' '}
