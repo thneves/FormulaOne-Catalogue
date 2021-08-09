@@ -18,6 +18,13 @@ const CircuitsList = () => {
     <CircuitCard
       key={circuit.id}
       circuit={circuit.name}
+      image={circuit.image}
+      competition={circuit.competition.name}
+      country={circuit.competition.location.country}
+      city={circuit.competition.location.city}
+      length={circuit.length}
+      capacity={circuit.capacity}
+      owner={circuit.owner}
     />
   ));
 

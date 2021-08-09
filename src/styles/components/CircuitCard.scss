@@ -33,3 +33,34 @@
       -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
   }
 }
+
+.circuit-modal-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  padding: 2rem;
+  gap: 1rem;
+  border: 3px solid rgba(35, 37, 38, 1);
+
+  .circuit-image {
+    width: 60%;
+    height: 90%;
+    max-width: 50%;
+    max-height: 50vh;
+  }
+
+  .circuit-details {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Orbitron', sans-serif;
+
+    span {
+      font-size: 1rem;
+      padding: 1rem 0 1rem 1rem;
+      margin: 0.2rem;
+      border: 1px solid black;
+    }
+  }
+}
