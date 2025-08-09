@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
-import { fetchDrivers } from '../redux/thunk';
+import { fetchDrivers, fetchTeams } from '../redux/thunk';
 import { displaySeason } from '../redux/actions';
 import DriversRanking from '../components/DriversRanking';
 import TeamsRanking from '../components/TeamsRanking';
@@ -16,7 +16,7 @@ const RankingsList = () => {
   const dispatch = useDispatch();
   const currentSeason = useSelector(state => state.currentSeason);
   const rankingState = useSelector(state => state.drivers.drivers);
-
+  const teamsRankingState = useSelector(state => state.teams.teams);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -24,6 +24,7 @@ const RankingsList = () => {
     if (season) {
       dispatch(displaySeason(season));
       fetchDrivers(season);
+      fetchTeams(season);
     } 
     // If no season in URL but we have one in Redux, redirect to proper URL
     else if (currentSeason && currentSeason !== 0) {
@@ -61,6 +62,15 @@ const RankingsList = () => {
     />
   ));
 
+  const printTeamsRanking = teamsRankingState.map(team => {
+    <TeamsRanking
+      key={team.position}
+      team={team.team}
+      points={team.points}
+      teamLogo={team.teamLogo}
+    />
+  });
+
   return (
     <>
       <div className="ranking">
@@ -74,6 +84,9 @@ const RankingsList = () => {
         </div>
         <div className="ranking-list">
           { printDriversRanking }
+        </div>
+        <div class="ranking-list">
+          { printTeamsRanking }
         </div>
       </div>
     </>
