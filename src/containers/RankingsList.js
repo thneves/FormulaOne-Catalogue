@@ -15,9 +15,11 @@ const RankingsList = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const currentSeason = useSelector(state => state.currentSeason);
-  const rankingState = useSelector(state => state.drivers.drivers);
+  const driversRankingState = useSelector(state => state.drivers.drivers);
   const teamsRankingState = useSelector(state => state.teams.teams);
   const [loading, setLoading] = useState(true);
+
+
 
   useEffect(() => {
     // If we have a season from URL, use it
@@ -26,6 +28,7 @@ const RankingsList = () => {
       dispatch(fetchDrivers(season));
       dispatch(fetchTeams(season));
     } 
+
     // If no season in URL but we have one in Redux, redirect to proper URL
     else if (currentSeason && currentSeason !== 0) {
       navigate(`/rankings/${currentSeason}`, { replace: true });
@@ -47,6 +50,7 @@ const RankingsList = () => {
 
   const displayedSeason = season || currentSeason;
 
+  console.log(teamsRankingState)
   const printTeamsRanking = teamsRankingState.map(team => (
     <TeamsRanking
       key={team.position}
@@ -58,7 +62,7 @@ const RankingsList = () => {
     />
   ));
 
-  const printDriversRanking = rankingState.map(driver => (
+  const printDriversRanking = driversRankingState.map(driver => (
     <DriversRanking
       key={driver.position}
       driver={driver.driver.name}
