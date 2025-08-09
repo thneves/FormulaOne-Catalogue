@@ -51,4 +51,31 @@
       }
     }
   }
+  
+  .rankings-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    
+    @media (max-width: 1200px) {
+      flex-direction: column;
+    }
+    
+    .ranking-list {
+      width: 48%;
+      
+      @media (max-width: 1200px) {
+        width: 100%;
+      }
+    }
+    
+    .ranking-category-title {
+      color: white;
+      text-align: center;
+      font-family: "Orbitron", sans-serif;
+      margin: 1rem 0;
+      font-size: 1.5rem;
+    }
+  }
 }
