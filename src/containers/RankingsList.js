@@ -11,7 +11,6 @@ import '../styles/containers/RankingsList.scss';
 const RankingsList = () => {
   const currentSeason = useSelector(state => state.currentSeason);
   const rankingState = useSelector(state => state.drivers.drivers);
-  const bestEightRank = (rankingState.filter((driver, index) => index < 8));
 
   const [loading, setLoading] = useState(true);
 
@@ -24,7 +23,7 @@ const RankingsList = () => {
     return <Loader />;
   }
 
-  const printRanking = bestEightRank.map(driver => (
+  const printRanking = rankingState.map(driver => (
     <DriversRanking
       key={driver.position}
       driver={driver.driver.name}
@@ -45,7 +44,7 @@ const RankingsList = () => {
         <div className="ranking-head">
           <Link to="/" className="back-icon"><FontAwesomeIcon icon={faArrowCircleLeft}>Back</FontAwesomeIcon></Link>
           <h3 className="ranking-text">
-            Best 8 drivers - Season
+            Season Ranking
             {' '}
             { currentSeason }
           </h3>
