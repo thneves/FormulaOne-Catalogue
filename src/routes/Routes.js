@@ -1,19 +1,19 @@
 import React from 'react';
 import {
-  BrowserRouter, Route, Switch,
+  BrowserRouter, Route, Routes,
 } from 'react-router-dom';
 import Header from '../components/Header';
 import RankingsList from '../containers/RankingsList';
 import SeasonsList from '../containers/SeasonsList';
 
-const Routes = () => (
+const AppRoutes = () => (
   <BrowserRouter>
     <Header />
-    <Switch>
-      <Route path="/" component={SeasonsList} exact />
-      <Route path="/rankings" component={RankingsList} />
-    </Switch>
+    <Routes>
+      <Route path="/" element={<SeasonsList />} />
+      <Route path="/rankings" element={<RankingsList />} />
+    </Routes>
   </BrowserRouter>
 );
 
-export default Routes;
+export default AppRoutes;

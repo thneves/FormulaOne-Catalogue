@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { displaySeason } from '../redux/actions';
 import '../styles/components/SeasonCard.scss';
 import RandomImage from '../helpers/RandomImage';
@@ -9,11 +9,11 @@ import RandomImage from '../helpers/RandomImage';
 const SeasonCard = ({ season }) => {
   const year = season;
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleClick = () => {
     dispatch(displaySeason(year));
-    history.push('/rankings');
+    navigate('/rankings');
   };
 
   return (
