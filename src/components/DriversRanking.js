@@ -59,7 +59,7 @@ const DriversRanking = ({
         onRequestClose={openModal}
       >
         <div className="modal">
-          <h1>Team Info </h1>
+          <h1>{renderDriver ? 'Driver Info' : 'Team Info'}</h1>
           <button onClick={closeModal} className="close-btn" type="button"><FontAwesomeIcon icon={faTimesCircle}>Close Window</FontAwesomeIcon></button>
         </div>
         <TeamDetails renderTeam={renderTeam} />
