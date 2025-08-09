@@ -55,7 +55,7 @@
   .rankings-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     
     @media (max-width: 1200px) {

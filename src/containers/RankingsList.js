@@ -81,16 +81,20 @@ const RankingsList = () => {
         <div className="ranking-head">
           <Link to="/" className="back-icon"><FontAwesomeIcon icon={faArrowCircleLeft}>Back</FontAwesomeIcon></Link>
           <h3 className="ranking-text">
-            Season Ranking
-            {' '}
             { displayedSeason }
+            {' '}
+            Season Rankings
           </h3>
         </div>
-        <div className="ranking-list">
-          { printDriversRanking }
-        </div>
-        <div className="ranking-list">
-          { printTeamsRanking }
+        <div className="rankings-container">
+          <div className="ranking-list drivers-list">
+            <h4 className="ranking-category-title">Drivers</h4>
+            { printDriversRanking }
+          </div>
+          <div className="ranking-list teams-list">
+            <h4 className="ranking-category-title">Teams</h4>
+            { printTeamsRanking }
+          </div>
         </div>
       </div>
     </>
