@@ -54,11 +54,11 @@ const RankingsList = () => {
   const printTeamsRanking = teamsRankingState.map(team => (
     <TeamsRanking
       key={team.position}
-      teamId={team.teamId}
-      team={team.team}
+      teamId={team.team.id}
+      team={team.team.name}
       position={team.position}
       points={team.points}
-      teamLogo={team.teamLogo}
+      teamLogo={team.team.logo}
     />
   ));
 

@@ -34,8 +34,6 @@ const TeamsRanking = ({
 		setRenderTeam(!renderTeam);
 	}
 
-	openModal.setAppElement('body');
-
 	if (showModal) {
 		return (
 			<Modal isOpen={showModal} onRequestClose={openModal}>
