@@ -6,6 +6,7 @@ import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import { fetchDrivers } from '../redux/thunk';
 import { displaySeason } from '../redux/actions';
 import DriversRanking from '../components/DriversRanking';
+import TeamsRanking from '../components/TeamsRanking';
 import Loader from '../components/Loader';
 import '../styles/containers/RankingsList.scss';
 
@@ -45,7 +46,7 @@ const RankingsList = () => {
 
   const displayedSeason = season || currentSeason;
 
-  const printRanking = rankingState.map(driver => (
+  const printDriversRanking = rankingState.map(driver => (
     <DriversRanking
       key={driver.position}
       driver={driver.driver.name}
@@ -72,7 +73,7 @@ const RankingsList = () => {
           </h3>
         </div>
         <div className="ranking-list">
-          { printRanking }
+          { printDriversRanking }
         </div>
       </div>
     </>

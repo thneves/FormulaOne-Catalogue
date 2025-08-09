@@ -76,5 +76,5 @@ const fetchOneDriver = driver => {
 };
 
 export {
-  fetchSeasons, fetchDrivers, fetchTeam, fetchOneDriver,
+  fetchSeasons, fetchDrivers, fetchTeam, fetchOneDriver, fetchTeams,
 };
