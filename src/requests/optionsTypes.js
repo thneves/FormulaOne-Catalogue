@@ -9,7 +9,7 @@ const seasons = {
 
 const teamsRankings = season => ({
   method: 'GET',
-  url: 'https://api-formula-1.p.rapidapi.com/ranking/teams',
+  url: 'https://api-formula-1.p.rapidapi.com/rankings/teams',
   params: { season },
   headers: {
     'x-rapidapi-key': process.env.REACT_APP_API_KEY,

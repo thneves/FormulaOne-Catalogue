@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 // import ../styles/components/TeamsRanking.scss;
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import defaultJohn from '../assets/images/defaultjohn.png';
-import { fetchTeams } from '../redux/thunk';
+import { fetchTeam } from '../redux/thunk';
 import TeamDetails from './TeamDetails';
 
 const TeamsRanking = ({
@@ -29,7 +30,7 @@ const TeamsRanking = ({
 	const openTeamDetails = e => {
 		openModal();
 		const id = Number(e.currentTarget.value);
-		fetchTeams(id);
+		fetchTeam(id);
 		setRenderTeam(!renderTeam);
 	}
 
@@ -49,25 +50,39 @@ const TeamsRanking = ({
 	}
 
 	return (
-		<>
-			<div className='team-card'>
-				<span className='team-position'>
-						{ position }
+	<>
+		<div className='team-card'>
+			<span className='team-position'>
+					{ position }
+			</span>
+			<button className="team-btn" value={teamId} type="button" onClick={openTeamDetails}>
+				<img className="team-image" onError={e => { e.target.src = defaultJohn; }} src={teamLogo} alt="team details" />
+			</button>
+			<div className="team-info">
+				<span className="team-name">
+					{team}
 				</span>
-				<button className="team-btn" value={teamId} type="button" onClick={openTeamDetails}>
-          <img className="team-image" onError={e => { e.target.src = defaultJohn; }} src={teamLogo} alt="team details" />
-        </button>
-				<div className="team-info">
-          <span className="team-name">
-            {team}
-          </span>
-          <span className="points-wins">
-            Points&nbsp;&nbsp;
-            <strong>{ points }</strong>
-          </span>
-        </div>
+				<span className="points-wins">
+					Points&nbsp;&nbsp;
+					<strong>{ points }</strong>
+				</span>
 			</div>
-		</>
-	)};
+		</div>
+	</>
+	)
+};
 
-	export default TeamsRanking;
+TeamsRanking.defaultProps = {
+	points: 0
+}
+
+TeamsRanking.Prototype = {
+	teamId: PropTypes.number.isRequired,
+	team: PropTypes.string.isRequired,
+	position: PropTypes.number.isRequired,
+	points: PropTypes.number.isRequired,
+	teamLogo: PropTypes.string.isRequired,
+}
+
+
+export default TeamsRanking;

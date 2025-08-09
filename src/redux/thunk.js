@@ -1,4 +1,3 @@
-import store from './store';
 import {
   fetchSeasonsRequest,
   fetchSeasonsSuccess,
@@ -20,58 +19,58 @@ import {
   getSeasons, getDriversRanking, getTeamInfo, getDriverInfo, getTeamsRanking
 } from '../requests/api';
 
-const fetchSeasons = () => {
-  store.dispatch(fetchSeasonsRequest());
-  const requestSeasons = getSeasons();
-  requestSeasons.then(seasons => {
-    store.dispatch(fetchSeasonsSuccess(seasons));
-  })
+const fetchSeasons = () => dispatch => {
+  dispatch(fetchSeasonsRequest());
+  return getSeasons()
+    .then(seasons => {
+      dispatch(fetchSeasonsSuccess(seasons));
+    })
     .catch(error => {
-      store.dispatch(fetchSeasonsFailure(error.message));
+      dispatch(fetchSeasonsFailure(error.message));
     });
 };
 
-const fetchTeams = season => {
-  store.dispatch(fetchTeamsRequest());
-  const requestTeams = getTeamsRanking(season);
-  requestTeams.then(teams => {
-    store.dispatch(fetchTeamsSuccess(teams));
-  })
+const fetchTeams = season => dispatch => {
+  dispatch(fetchTeamsRequest());
+  return getTeamsRanking(season)
+    .then(teams => {
+      dispatch(fetchTeamsSuccess(teams));
+    })
     .catch(error => {
-      store.dispatch(fetchTeamsFailure(error.message));
+      dispatch(fetchTeamsFailure(error.message));
     }); 
 } 
 
-const fetchDrivers = season => {
-  store.dispatch(fetchDriversRequest());
-  const requestDrivers = getDriversRanking(season);
-  requestDrivers.then(drivers => {
-    store.dispatch(fetchDriversSuccess(drivers));
-  })
+const fetchDrivers = season => dispatch => {
+  dispatch(fetchDriversRequest());
+  return getDriversRanking(season)
+    .then(drivers => {
+      dispatch(fetchDriversSuccess(drivers));
+    })
     .catch(error => {
-      store.dispatch(fetchDriversFailure(error.message));
+      dispatch(fetchDriversFailure(error.message));
     });
 };
 
-const fetchTeam = team => {
-  store.dispatch(fetchTeamRequest());
-  const requestTeam = getTeamInfo(team);
-  requestTeam.then(team => {
-    store.dispatch(fetchTeamSuccess(team));
-  })
+const fetchTeam = team => dispatch => {
+  dispatch(fetchTeamRequest());
+  return getTeamInfo(team)
+    .then(team => {
+      dispatch(fetchTeamSuccess(team));
+    })
     .catch(error => {
-      store.dispatch(fetchTeamFailure(error.message));
+      dispatch(fetchTeamFailure(error.message));
     });
 };
 
-const fetchOneDriver = driver => {
-  store.dispatch(fetchDriverRequest());
-  const requestDriver = getDriverInfo(driver);
-  requestDriver.then(driver => {
-    store.dispatch(fetchDriverSuccess(driver));
-  })
+const fetchOneDriver = driver => dispatch => {
+  dispatch(fetchDriverRequest());
+  return getDriverInfo(driver)
+    .then(driver => {
+      dispatch(fetchDriverSuccess(driver));
+    })
     .catch(error => {
-      store.dispatch(fetchDriverFailure(error.mesage));
+      dispatch(fetchDriverFailure(error.message));
     });
 };
 

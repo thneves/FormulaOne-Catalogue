@@ -23,8 +23,8 @@ const RankingsList = () => {
     // If we have a season from URL, use it
     if (season) {
       dispatch(displaySeason(season));
-      fetchDrivers(season);
-      fetchTeams(season);
+      dispatch(fetchDrivers(season));
+      dispatch(fetchTeams(season));
     } 
     // If no season in URL but we have one in Redux, redirect to proper URL
     else if (currentSeason && currentSeason !== 0) {
@@ -47,6 +47,17 @@ const RankingsList = () => {
 
   const displayedSeason = season || currentSeason;
 
+  const printTeamsRanking = teamsRankingState.map(team => (
+    <TeamsRanking
+      key={team.position}
+      teamId={team.teamId}
+      team={team.team}
+      position={team.position}
+      points={team.points}
+      teamLogo={team.teamLogo}
+    />
+  ));
+
   const printDriversRanking = rankingState.map(driver => (
     <DriversRanking
       key={driver.position}
@@ -62,15 +73,6 @@ const RankingsList = () => {
     />
   ));
 
-  const printTeamsRanking = teamsRankingState.map(team => {
-    <TeamsRanking
-      key={team.position}
-      team={team.team}
-      points={team.points}
-      teamLogo={team.teamLogo}
-    />
-  });
-
   return (
     <>
       <div className="ranking">
@@ -85,7 +87,7 @@ const RankingsList = () => {
         <div className="ranking-list">
           { printDriversRanking }
         </div>
-        <div class="ranking-list">
+        <div className="ranking-list">
           { printTeamsRanking }
         </div>
       </div>
