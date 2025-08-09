@@ -19,8 +19,6 @@ const RankingsList = () => {
   const teamsRankingState = useSelector(state => state.teams.teams);
   const [loading, setLoading] = useState(true);
 
-
-
   useEffect(() => {
     // If we have a season from URL, use it
     if (season) {

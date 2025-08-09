@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
-// import ../styles/components/TeamsRanking.scss;
+import '../styles/components/TeamsRanking.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import defaultJohn from '../assets/images/defaultjohn.png';
