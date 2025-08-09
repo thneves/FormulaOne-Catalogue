@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector , useDispatch} from 'react-redux';
 import { fetchSeasons } from '../redux/thunk';
 import '../styles/containers/SeasonsLists.scss';
 import SeasonCard from '../components/SeasonCard';
@@ -9,6 +9,7 @@ import Loader from '../components/Loader';
 const SeasonsList = () => {
   const seasonListState = useSelector(state => state.seasons.seasons);
   const filterSeasonState = useSelector(state => state.filterSeasons);
+  const dispatch = useDispatch();
 
   const printSeasons = (
     filterSeasonState.length === 0
@@ -19,9 +20,9 @@ const SeasonsList = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchSeasons();
+    dispatch(fetchSeasons());
     setLoading(false);
-  }, [setLoading]);
+  }, [setLoading, dispatch]);
 
   if (loading) {
     return <Loader />;
