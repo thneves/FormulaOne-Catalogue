@@ -16,14 +16,14 @@ const teamsReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        driver: action.payload,
+        teams: action.payload,
         error: '',
       }
     case FETCH_TEAMS_FAILURE:
       return {
         ...state,
         loading: false,
-        drivers: [],
+        teams: [],
         error: action.payload
       }
     default:
