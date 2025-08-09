@@ -10,11 +10,20 @@ const getSeasons = async () => {
   throw Error(response.status);
 };
 
-const getDrivers = async season => {
-  const response = await axios.request(options.rankings(season));
+const getDriversRanking = async season => {
+  const response = await axios.request(options.driversRankings(season));
   if (response.status === 200) {
     const drivers = response.data.response;
     return drivers;
+  }
+  throw Error(response.status);
+};
+
+const getTeamsRanking = async season => {
+  const response = await axios.request(options.teamsRankings(season));
+  if (response.status === 200) {
+    const teams = response.data.response;
+    return teams;
   }
   throw Error(response.status);
 };
@@ -38,5 +47,5 @@ const getDriverInfo = async driver => {
 };
 
 export {
-  getSeasons, getDrivers, getTeamInfo, getDriverInfo,
+  getSeasons, getDriversRanking, getTeamInfo, getDriverInfo, getTeamsRanking
 };

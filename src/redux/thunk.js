@@ -12,9 +12,12 @@ import {
   fetchDriverRequest,
   fetchDriverSuccess,
   fetchDriverFailure,
+  fetchTeamsRequest,
+  fetchTeamsSuccess,
+  fetchTeamsFailure,
 } from './actions';
 import {
-  getSeasons, getDrivers, getTeamInfo, getDriverInfo,
+  getSeasons, getDriversRanking, getTeamInfo, getDriverInfo, getTeamsRanking
 } from '../requests/api';
 
 const fetchSeasons = () => {
@@ -28,9 +31,20 @@ const fetchSeasons = () => {
     });
 };
 
+const fetchTeams = season => {
+  store.dispatch(fetchTeamsRequest());
+  const requestTeams = getTeamsRanking(season);
+  requestTeams.then(teams => {
+    store.dispatch(fetchTeamsSuccess(teams));
+  })
+    .catch(error => {
+      store.dispatch(fetchTeamsFailure(error.message));
+    }); 
+} 
+
 const fetchDrivers = season => {
   store.dispatch(fetchDriversRequest());
-  const requestDrivers = getDrivers(season);
+  const requestDrivers = getDriversRanking(season);
   requestDrivers.then(drivers => {
     store.dispatch(fetchDriversSuccess(drivers));
   })

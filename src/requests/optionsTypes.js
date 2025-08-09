@@ -7,7 +7,17 @@ const seasons = {
   },
 };
 
-const rankings = season => ({
+const teamsRankings = season => ({
+  method: 'GET',
+  url: 'https://api-formula-1.p.rapidapi.com/ranking/teams',
+  params: { season },
+  headers: {
+    'x-rapidapi-key': process.env.REACT_APP_API_KEY,
+    'x-rapidapi-host': 'api-formula-1.p.rapidapi.com',
+  }
+})
+
+const driversRankings = season => ({
   method: 'GET',
   url: 'https://api-formula-1.p.rapidapi.com/rankings/drivers',
   params: { season },
@@ -38,5 +48,5 @@ const driverInfo = driver => ({
 });
 
 export {
-  seasons, rankings, teamInfo, driverInfo,
+  seasons, driversRankings, teamInfo, driverInfo, teamsRankings
 };
