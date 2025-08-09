@@ -11,6 +11,7 @@ const AppRoutes = () => (
     <Header />
     <Routes>
       <Route path="/" element={<SeasonsList />} />
+      <Route path="/rankings/:season" element={<RankingsList />} />
       <Route path="/rankings" element={<RankingsList />} />
     </Routes>
   </BrowserRouter>

@@ -13,7 +13,7 @@ const SeasonCard = ({ season }) => {
 
   const handleClick = () => {
     dispatch(displaySeason(year));
-    navigate('/rankings');
+    navigate(`/rankings/${year}`);
   };
 
   return (

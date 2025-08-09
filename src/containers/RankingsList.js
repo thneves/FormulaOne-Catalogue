@@ -1,27 +1,49 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import { fetchDrivers } from '../redux/thunk';
+import { displaySeason } from '../redux/actions';
 import DriversRanking from '../components/DriversRanking';
 import Loader from '../components/Loader';
 import '../styles/containers/RankingsList.scss';
 
 const RankingsList = () => {
+  const { season } = useParams();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const currentSeason = useSelector(state => state.currentSeason);
   const rankingState = useSelector(state => state.drivers.drivers);
 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchDrivers(currentSeason);
+    // If we have a season from URL, use it
+    if (season) {
+      dispatch(displaySeason(season));
+      fetchDrivers(season);
+    } 
+    // If no season in URL but we have one in Redux, redirect to proper URL
+    else if (currentSeason && currentSeason !== 0) {
+      navigate(`/rankings/${currentSeason}`, { replace: true });
+      return;
+    }
+    // If no season anywhere, redirect to home
+    else {
+      navigate('/', { replace: true });
+      return;
+    }
+    
     setLoading(false);
-  }, [setLoading]);
+  }, [season, currentSeason, dispatch, navigate]);
 
-  if (loading) {
+  // Show loader while determining what to do
+  if (loading || (!season && !currentSeason)) {
     return <Loader />;
   }
+
+  const displayedSeason = season || currentSeason;
 
   const printRanking = rankingState.map(driver => (
     <DriversRanking
@@ -46,10 +68,12 @@ const RankingsList = () => {
           <h3 className="ranking-text">
             Season Ranking
             {' '}
-            { currentSeason }
+            { displayedSeason }
           </h3>
         </div>
-        { printRanking }
+        <div className="ranking-list">
+          { printRanking }
+        </div>
       </div>
     </>
   );
