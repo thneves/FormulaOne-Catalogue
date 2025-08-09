@@ -12,8 +12,8 @@ const SeasonsList = () => {
 
   const printSeasons = (
     filterSeasonState.length === 0
-      ? seasonListState.map(season => <SeasonCard key={season} season={season} />)
-      : filterSeasonState.map(season => <SeasonCard key={season} season={season} />)
+      ? seasonListState.map(season => <SeasonCard key={season} season={season} />).reverse()
+      : filterSeasonState.map(season => <SeasonCard key={season} season={season} />).reverse()
   );
 
   const [loading, setLoading] = useState(true);
