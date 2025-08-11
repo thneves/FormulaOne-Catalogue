@@ -6,6 +6,10 @@ export const FETCH_DRIVERS_REQUEST = 'FETCH_DRIVERS_REQUEST';
 export const FETCH_DRIVERS_SUCCESS = 'FETCH_DRIVERS_SUCCESS';
 export const FETCH_DRIVERS_FAILURE = 'FETCH_DRIVERS_FAILURE';
 
+export const FETCH_CIRCUITS_REQUEST = 'FETCH_CIRCUITS_REQUEST';
+export const FETCH_CIRCUITS_SUCCESS = 'FETCH_CIRCUITS_SUCCESS';
+export const FETCH_CIRCUITS_FAILURE = 'FETCH_CIRCUITS_FAILURE';
+
 export const ADD_FILTER = 'ADD_FILTER';
 export const REMOVE_FILTER = 'REMOVE_FILTER';
 export const RESET_FILTER = 'RESET_FILTER';
@@ -47,3 +51,7 @@ export const fetchDriverFailure = error => ({ type: FETCH_DRIVER_FAILURE, payloa
 export const fetchTeamsRequest = () => ({ type: FETCH_TEAMS_REQUEST });
 export const fetchTeamsSuccess = teams => ({ type: FETCH_TEAMS_SUCCESS, payload: teams });
 export const fetchTeamsFailure = error => ({ type: FETCH_TEAMS_FAILURE, payload: error });
+
+export const fetchCircuitsRequest = () => ({ type: FETCH_CIRCUITS_REQUEST });
+export const fetchCircuitsSuccess = circuits => ({ type: FETCH_CIRCUITS_SUCCESS, payload: circuits });
+export const fetchCircuitsFailure = error => ({ type: FETCH_CIRCUITS_FAILURE, payload: error });

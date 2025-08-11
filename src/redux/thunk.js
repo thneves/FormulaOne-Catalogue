@@ -14,9 +14,12 @@ import {
   fetchTeamsRequest,
   fetchTeamsSuccess,
   fetchTeamsFailure,
+  fetchCircuitsRequest,
+  fetchCircuitsSuccess,
+  fetchCircuitsFailure,
 } from './actions';
 import {
-  getSeasons, getDriversRanking, getTeamInfo, getDriverInfo, getTeamsRanking
+  getSeasons, getDriversRanking, getTeamInfo, getDriverInfo, getTeamsRanking, getCircuits
 } from '../requests/api';
 
 const fetchSeasons = () => dispatch => {
@@ -74,6 +77,17 @@ const fetchOneDriver = driver => dispatch => {
     });
 };
 
+const fetchCircuits = season => dispatch => {
+  dispatch(fetchCircuitsRequest());
+  return getCircuits(season)
+    .then(circuits => {
+      dispatch(fetchCircuitsSuccess(circuits));
+    })
+    .catch(error => {
+      dispatch(fetchCircuitsFailure(error.message));
+    });
+};
+
 export {
-  fetchSeasons, fetchDrivers, fetchTeam, fetchOneDriver, fetchTeams,
+  fetchSeasons, fetchDrivers, fetchTeam, fetchOneDriver, fetchTeams, fetchCircuits,
 };
